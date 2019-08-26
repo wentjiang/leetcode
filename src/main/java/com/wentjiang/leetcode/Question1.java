@@ -1,9 +1,11 @@
+package com.wentjiang.leetcode;
+
 /**
  * @author wentaojiang
  * @date 2019/2/24 3:01 PM
  * @description
  */
-public class Question_1 {
+public class Question1 {
 
     public int[] twoSum(int[] nums, int target) {
         int[] result = new int[2];

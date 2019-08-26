@@ -1,9 +1,11 @@
+package com.wentjiang.leetcode;
+
 /**
  * @author wentaojiang
  * @date 2019/4/8 8:33 PM
  * @description
  */
-public class Question_9 {
+public class Question9 {
     public boolean isPalindrome(int x) {
         String sx = String.valueOf(x);
         char[] chs = sx.toCharArray();

@@ -1,3 +1,5 @@
+package com.wentjiang.leetcode;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -6,7 +8,7 @@ import java.util.Set;
  * @date 2019/2/24 5:28 PM
  * @description
  */
-public class Question_3 {
+public class Question3 {
     public static int lengthOfLongestSubstring(String s) {
         int longest = 0;
         int header = 0;

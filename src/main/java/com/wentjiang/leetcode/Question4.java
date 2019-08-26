@@ -1,9 +1,11 @@
+package com.wentjiang.leetcode;
+
 /**
  * @author wentaojiang
  * @date 2019/2/24 5:58 PM
  * @description
  */
-public class Question_4 {
+public class Question4 {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 //        int m = nums1.length;
 //        int n = nums2.length;

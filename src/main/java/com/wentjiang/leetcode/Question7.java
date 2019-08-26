@@ -1,9 +1,11 @@
+package com.wentjiang.leetcode;
+
 /**
  * @author wentaojiang
  * @date 2019/4/8 7:58 PM
  * @description
  */
-public class Question_7 {
+public class Question7 {
     public static int reverse(int x) {
         boolean b = false;
         if (x < 0) {

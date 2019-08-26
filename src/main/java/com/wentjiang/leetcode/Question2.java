@@ -1,9 +1,11 @@
+package com.wentjiang.leetcode;
+
 /**
  * @author wentaojiang
  * @date 2019/2/24 3:07 PM
  * @description
  */
-public class Question_2 {
+public class Question2 {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode tail = null;
@@ -30,22 +32,32 @@ public class Question_2 {
                 tail.next = temp;
                 tail = tail.next;
             }
-            if (l1 != null){
+            if (l1 != null) {
                 l1 = l1.next;
             }
-            if (l2 != null){
+            if (l2 != null) {
                 l2 = l2.next;
             }
         }
         return header;
     }
 
-    public class ListNode {
+    public static class ListNode {
         int val;
         ListNode next;
 
-        ListNode(int x) {
+        public ListNode(int x) {
             val = x;
+        }
+
+        @Override
+        public String toString() {
+            StringBuilder str = new StringBuilder(String.valueOf(val));
+            while (next != null) {
+                str.append(next.toString());
+                next = next.next;
+            }
+            return str.toString();
         }
     }
 
