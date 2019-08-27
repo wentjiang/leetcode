@@ -1,3 +1,5 @@
+package com.wentjiang.leetcode.q1_100;
+
 import java.util.ArrayList;
 import java.util.List;
 

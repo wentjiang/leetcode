@@ -1,4 +1,4 @@
-package com.wentjiang.leetcode;
+package com.wentjiang.leetcode.q1_100;
 
 /**
  * @author wentaojiang

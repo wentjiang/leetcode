@@ -1,5 +1,6 @@
-package com.wentjiang.leetcode;
+package com.wentjiang.leetcode.q1_100;
 
+import com.wentjiang.leetcode.q1_100.Question2;
 import org.junit.Before;
 import org.junit.Test;
 

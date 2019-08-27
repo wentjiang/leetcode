@@ -1,10 +1,9 @@
-package com.wentjiang.leetcode;
+package com.wentjiang.leetcode.q1_100;
 
+import com.wentjiang.leetcode.q1_100.Question1;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * @author wentaojiang
