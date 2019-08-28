@@ -1,5 +1,8 @@
 package com.wentjiang.leetcode.q1_100;
 
+import java.util.Comparator;
+import java.util.stream.Stream;
+
 /**
  * @author wentaojiang
  * @date 2019/8/27 7:07 PM
@@ -8,9 +11,12 @@ package com.wentjiang.leetcode.q1_100;
 public class Question14 {
 
     public String longestCommonPrefix(String[] strs) {
+        if (strs.length == 0) {
+            return "";
+        }
         StringBuilder stringBuilder = new StringBuilder();
         char tempCh;
-        int minLength = Integer.MAX_VALUE;
+        int minLength = Stream.of(strs).min(Comparator.comparingInt(String::length)).get().length();
         for (String str : strs) {
             if (minLength > str.length()) {
                 minLength = str.length();
@@ -27,7 +33,7 @@ public class Question14 {
             stringBuilder.append(tempCh);
         }
 
-        return "";
+        return stringBuilder.toString();
     }
 
 }

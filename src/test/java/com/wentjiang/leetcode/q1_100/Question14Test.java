@@ -29,4 +29,19 @@ public class Question14Test {
     public void longestCommonPrefix2() {
         Assert.assertEquals("", question14.longestCommonPrefix(new String[]{"dog", "racecar", "car"}));
     }
+
+    @Test
+    public void longestCommonPrefix3() {
+        Assert.assertEquals("", question14.longestCommonPrefix(new String[]{}));
+    }
+
+    @Test
+    public void longestCommonPrefix4() {
+        Assert.assertEquals("a", question14.longestCommonPrefix(new String[]{"a"}));
+    }
+
+    @Test
+    public void longestCommonPrefix5() {
+        Assert.assertEquals("c", question14.longestCommonPrefix(new String[]{"c", "c"}));
+    }
 }
