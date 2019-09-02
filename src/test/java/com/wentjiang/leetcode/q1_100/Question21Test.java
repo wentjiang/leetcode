@@ -24,7 +24,10 @@ public class Question21Test {
         Question21.ListNode l1 = Question21.getListNode(new int[]{1, 2, 4});
         Question21.ListNode l2 = Question21.getListNode(new int[]{1, 3, 4});
         Question21.ListNode result = question21.mergeTwoLists(l1, l2);
-        System.out.println(result);
+        while (result != null){
+            System.out.println(result.val);
+            result = result.next;
+        }
     }
 
 
