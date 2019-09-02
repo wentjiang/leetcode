@@ -3,25 +3,12 @@ package com.wentjiang.leetcode.q1_100;
 /**
  * @author wentaojiang
  * @date 2019/2/24 5:58 PM
- * @description
+ * @description 题目中要求时间复杂度为O(log(m + n)),如果直接合并遍历,复杂度为n,不满足要求
+ * 先判断是否一个数组比另一个数组所有数都大,如果是,按位计算即可
  */
 public class Question4 {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-//        int m = nums1.length;
-//        int n = nums2.length;
-//
-//        if (m > n) {
-//            int[] temp = nums1;
-//            nums1 = nums2;
-//            nums2 = temp;
-//        }
-//
-//        int imin =0;
-//        int imax = m;
-//        int halfLen = (m+n+1)/2;
-//        while (imin<imax){
-//
-//        }
+
         return 0;
     }
 }
