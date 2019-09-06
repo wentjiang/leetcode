@@ -8,16 +8,16 @@ import static org.junit.Assert.*;
 
 /**
  * @author wentaojiang
- * @date 2019/9/5 3:13 PM
+ * @date 2019/9/6 11:09 AM
  * @description
  */
-public class Question11Test {
+public class Question11_2Test {
 
-    private Question11_1 question11;
+    private Question11_2 question11;
 
     @Before
     public void setUp() throws Exception {
-        question11 = new Question11_1();
+        question11 = new Question11_2();
     }
 
     @Test

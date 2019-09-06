@@ -5,7 +5,7 @@ package com.wentjiang.leetcode.q1_100;
  * @date 2019/9/5 2:54 PM
  * @description
  */
-public class Question11 {
+public class Question11_1 {
     public int maxArea(int[] height) {
         int maxArea = 0;
         if (height.length <= 1) {
