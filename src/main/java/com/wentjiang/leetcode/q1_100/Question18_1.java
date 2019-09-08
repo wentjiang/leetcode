@@ -13,58 +13,36 @@ public class Question18_1 {
         if (nums == null || nums.length < 4) {
             return result;
         }
-        Set<Integer> setI = new HashSet<>();
+        Arrays.sort(nums);
         for (int i = 0; i < nums.length - 3; i++) {
-            if (setI.contains(nums[i])) {
-                continue;
-            } else {
-                setI.add(nums[i]);
-            }
-            Set<Integer> setJ = new HashSet<>();
             for (int j = i + 1; j < nums.length - 2; j++) {
-                if (setJ.contains(nums[j])) {
-                    continue;
-                } else {
-                    setJ.add(nums[j]);
-                }
-                Set<Integer> setX = new HashSet<>();
-                for (int x = j + 1; x < nums.length - 1; x++) {
-                    if (setX.contains(nums[x])) {
-                        continue;
+                int start = j + 1;
+                int end = nums.length - 1;
+                while (start < end) {
+                    int sum = nums[i] + nums[j] + nums[start] + nums[end];
+                    if (sum == target) {
+                        List<Integer> list = Arrays.asList(nums[i], nums[j], nums[start], nums[end]);
+                        result.add(list);
+                        start++;
+                    } else if (sum < target) {
+                        start++;
                     } else {
-                        setX.add(nums[x]);
-                    }
-                    Set<Integer> setY = new HashSet<>();
-                    for (int y = x + 1; y < nums.length; y++) {
-                        if (setY.contains(nums[y])) {
-                            continue;
-                        } else {
-                            setY.add(nums[y]);
-                        }
-                        if (y != x + 1 && nums[y] == nums[y - 1]) {
-                            continue;
-                        }
-                        int sum = nums[i] + nums[j] + nums[x] + nums[y];
-                        if (sum == target) {
-                            List<Integer> list = Arrays.asList(nums[i], nums[j], nums[x], nums[y]);
-                            result.add(list);
-                        }
+                        end--;
                     }
                 }
             }
-        }
-        Iterator<List<Integer>> iterator = result.iterator();
-        Set<String> set = new HashSet<>();
-        while (iterator.hasNext()) {
-            List<Integer> list = iterator.next();
-            Collections.sort(list);
-            StringBuilder stringBuilder = new StringBuilder();
-            list.forEach(stringBuilder::append);
-            String string = stringBuilder.toString();
-            if (set.contains(string)) {
-                iterator.remove();
-            } else {
-                set.add(string);
+            Iterator<List<Integer>> iterator = result.iterator();
+            Set<String> set = new HashSet<>();
+            while (iterator.hasNext()) {
+                List<Integer> list = iterator.next();
+                StringBuilder stringBuilder = new StringBuilder();
+                list.forEach(stringBuilder::append);
+                String string = stringBuilder.toString();
+                if (set.contains(string)) {
+                    iterator.remove();
+                } else {
+                    set.add(string);
+                }
             }
         }
         return result;
