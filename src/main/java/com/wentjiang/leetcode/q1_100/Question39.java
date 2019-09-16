@@ -22,21 +22,19 @@ public class Question39 {
     }
 
     private void process(int start, int[] candidates, int target, List<Integer> list) {
-        if (0 > target) {
-            return;
-        }
         if (target == 0) {
             result.add(new ArrayList<>(list));
         }
         if (target > 0) {
             for (int i = start; i < candidates.length; i++) {
+                int num = target - candidates[i];
+                if (num < 0) {
+                    continue;
+                }
                 list.add(candidates[i]);
-                target -= candidates[i];
-                process(i, candidates, target, list);
-                target += candidates[i];
+                process(i, candidates, num, list);
                 list.remove(list.size() - 1);
             }
         }
     }
-
 }
