@@ -7,7 +7,7 @@ package com.wentjiang.leetcode.q1_100;
  */
 public class Question58 {
     public int lengthOfLastWord(String s) {
-        if (s == null || s.length() == 0) {
+        if (s.length() == 0) {
             return 0;
         }
         String[] strs = s.split(" ");
