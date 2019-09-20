@@ -43,5 +43,10 @@ public class Question43Test {
         Assert.assertEquals("7901234568",question43.multiply("8","987654321"));
     }
 
-
+    @Test
+    public void add(){
+        Assert.assertEquals("10821521012635269",question43.addSum("9876543120000000","944977892635269"));
+    }
+//    10821521012635269
+//   108215201012635269
 }

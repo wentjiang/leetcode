@@ -1,16 +1,13 @@
 package com.wentjiang.leetcode.q1_100;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * @author wentao.jiang
  * @date 2019/9/19 11:48 AM
- * @description //todo
+ * @description
  */
 public class Question43 {
+
     public String multiply(String num1, String num2) {
-        Map<Character, Integer> map = new HashMap<>();
         if ("0".equals(num1) || "0".equals(num2)) {
             return "0";
         }
@@ -18,15 +15,12 @@ public class Question43 {
         for (int i = 0; i < num2.length(); i++) {
             char ch = num2.charAt(num2.length() - i - 1);
             String tempResult = add(ch, num1, i);
-            System.out.println(ch + "*" + num1 + "=" + tempResult);
-            System.out.println(tempResult + "+" + sumResult);
             sumResult = addSum(tempResult, sumResult);
-            System.out.println(sumResult);
         }
         return sumResult;
     }
 
-    private String addSum(String tempResult, String sumResult) {
+    public String addSum(String tempResult, String sumResult) {
         StringBuilder stringBuilder = new StringBuilder();
         int tempLength = tempResult.length();
         int sumLength = sumResult.length();
@@ -48,11 +42,18 @@ public class Question43 {
             if (carry) {
                 carry = num / 10 == 1;
                 num = num % 10 + 1;
+                if (num == 10) {
+                    carry = true;
+                    num = 0;
+                }
             } else {
                 carry = num / 10 == 1;
                 num = num % 10;
             }
             stringBuilder.insert(0, num);
+        }
+        if (carry) {
+            stringBuilder.insert(0, 1);
         }
         return stringBuilder.toString();
     }
