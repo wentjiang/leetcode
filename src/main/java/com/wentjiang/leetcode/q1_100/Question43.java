@@ -40,16 +40,10 @@ public class Question43 {
             int num = Integer.parseInt(String.valueOf(tempResult.charAt(maxLength - i)))
                 + Integer.parseInt(String.valueOf(sumResult.charAt(maxLength - i)));
             if (carry) {
-                carry = num / 10 == 1;
-                num = num % 10 + 1;
-                if (num == 10) {
-                    carry = true;
-                    num = 0;
-                }
-            } else {
-                carry = num / 10 == 1;
-                num = num % 10;
+                num = num + 1;
             }
+            carry = num / 10 == 1;
+            num = num % 10;
             stringBuilder.insert(0, num);
         }
         if (carry) {
