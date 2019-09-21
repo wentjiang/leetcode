@@ -21,6 +21,7 @@ public class Question46Test {
 
     @Test
     public void permute() {
-
+        System.out.println(question46.permute(new int[]{1, 2, 3}));
     }
+
 }
