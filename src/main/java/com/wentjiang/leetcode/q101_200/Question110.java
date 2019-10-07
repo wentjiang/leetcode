@@ -5,7 +5,7 @@ package com.wentjiang.leetcode.q101_200;
  * @date 2019/10/6 8:38 AM
  * @description
  */
-public class Question_110 {
+public class Question110 {
 
     public class TreeNode {
         int val;

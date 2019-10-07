@@ -11,13 +11,13 @@ import static org.junit.Assert.*;
  * @date 2019/10/7 12:13 AM
  * @description
  */
-public class Question_42Test {
+public class Question42Test {
 
-    private Question_42 question_42;
+    private Question42 question_42;
 
     @Before
     public void setUp() throws Exception {
-        question_42 = new Question_42();
+        question_42 = new Question42();
     }
 
     @Test

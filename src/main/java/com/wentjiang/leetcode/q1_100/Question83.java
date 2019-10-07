@@ -5,7 +5,7 @@ package com.wentjiang.leetcode.q1_100;
  * @date 2019/9/23 1:41 PM
  * @description
  */
-public class Question_83 {
+public class Question83 {
 
     public static class ListNode {
         int val;

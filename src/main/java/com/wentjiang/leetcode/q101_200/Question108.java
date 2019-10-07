@@ -7,7 +7,7 @@ import java.util.Arrays;
  * @date 2019/10/3 3:54 PM
  * @description
  */
-public class Question_108 {
+public class Question108 {
 
     public class TreeNode {
         int val;

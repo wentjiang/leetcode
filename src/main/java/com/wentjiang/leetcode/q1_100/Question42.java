@@ -5,7 +5,7 @@ package com.wentjiang.leetcode.q1_100;
  * @date 2019/10/3 9:47 PM
  * @description
  */
-public class Question_42 {
+public class Question42 {
     public int trap(int[] height) {
         int sum = 0;
         for (int i = 0; i < height.length; ) {

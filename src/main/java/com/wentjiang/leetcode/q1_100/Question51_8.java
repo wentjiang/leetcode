@@ -8,10 +8,10 @@ import java.util.List;
  * @date 2019-08-24 22:35
  * @description 八皇后问题
  */
-public class Question_51_8 {
+public class Question51_8 {
 
     public static void main(String[] args) {
-        Question_51_8 question = new Question_51_8();
+        Question51_8 question = new Question51_8();
         System.out.println(question.solve8Queens());
     }
 

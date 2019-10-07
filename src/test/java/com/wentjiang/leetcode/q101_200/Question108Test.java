@@ -2,16 +2,14 @@ package com.wentjiang.leetcode.q101_200;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * @author wentao.jiang
  * @date 2019/10/3 4:21 PM
  * @description
  */
-public class Question_108Test {
+public class Question108Test {
 
-    private Question_108 question_108 = new Question_108();
+    private Question108 question_108 = new Question108();
 
 
 
