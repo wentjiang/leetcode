@@ -10,27 +10,27 @@ import java.util.List;
  * @description
  */
 public class Question46 {
+
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> list = new ArrayList<>();
+        int n = nums.length;
         for (int num : nums) {
             list.add(num);
         }
-        backtrack(nums.length, list, result, 0);
+        backtrack(n, list, result, 0);
         return result;
     }
 
-    public void backtrack(int n,
-                          List<Integer> nums,
-                          List<List<Integer>> output,
-                          int first) {
-        if (n == first) {
-            output.add(new ArrayList<>(nums));
+    private void backtrack(int n, List<Integer> list, List<List<Integer>> result, int first) {
+        if (first == n){
+            result.add(new ArrayList<>(list));
         }
         for (int i = first; i < n; i++) {
-            Collections.swap(nums, first, i);
-            backtrack(n, nums, output, first + 1);
-            Collections.swap(nums, first, i);
+            Collections.swap(list, first, i);
+            backtrack(n, list, result, first + 1);
+            Collections.swap(list, first, i);
         }
     }
+
 }
