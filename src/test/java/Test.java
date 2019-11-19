@@ -1,5 +1,4 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.StringTokenizer;
 
 /**
  * @author wentao.jiang
@@ -34,14 +33,7 @@ public class Test {
     }
 
     public static void main(String[] args) {
-        Student student = new Student("wentao", 26);
-        Map<Student, String> map = new HashMap<>();
-        map.put(student, "wentao");
-        System.out.println(map.get(student));
-        student.setName("wentao2");
-        System.out.println(map.get(student));
-        Student student1 = new Student("wentao", 26);
-        System.out.println(map.get(student1));
+        StringTokenizer stringTokenizer = new StringTokenizer("aaa bbb");
     }
 
 }
