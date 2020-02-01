@@ -1,5 +1,3 @@
-import java.util.StringTokenizer;
-
 /**
  * @author wentao.jiang
  * @date 2019/9/25 9:08 PM
@@ -33,7 +31,10 @@ public class Test {
     }
 
     public static void main(String[] args) {
-        StringTokenizer stringTokenizer = new StringTokenizer("aaa bbb");
+//        StringTokenizer stringTokenizer = new StringTokenizer("aaa bbb");
+        System.out.println(Math.pow(2, 3));
+        System.out.println(Math.pow(3, 2));
+
     }
 
 }
