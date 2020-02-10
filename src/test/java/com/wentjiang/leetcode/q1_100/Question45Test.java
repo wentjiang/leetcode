@@ -28,5 +28,18 @@ public class Question45Test {
         assertEquals(0, question45.jump(new int[]{1}));
     }
 
+    @Test
+    public void jump_1() {
+        assertEquals(2, question45.jump2(new int[]{2, 3, 1, 1, 4}));
+    }
 
+    @Test
+    public void jump_1_1() {
+        assertEquals(0, question45.jump1(new int[]{1}));
+    }
+
+    @Test
+    public void jump_1_2() {
+        assertEquals(2, question45.jump1(new int[]{2,3,0,1,4}));
+    }
 }
