@@ -15,20 +15,16 @@ public class Question4_1 {
         int secondIndex = 0;
         //循环归并
         for (int i = 0; i < nums1.length + nums2.length; i++) {
-            if (secondIndex == nums2.length || nums2.length == 0) {
+            if (secondIndex == nums2.length || nums2.length == 0 ||
+                    (nums1.length != firstIndex && nums2.length != secondIndex && nums1[firstIndex] < nums2[secondIndex])) {
                 nums[firstIndex + secondIndex] = nums1[firstIndex];
                 firstIndex++;
-            } else if (firstIndex == nums1.length || nums1.length == 0) {
-                nums[firstIndex + secondIndex] = nums2[secondIndex];
-                secondIndex++;
-            } else if (nums1[firstIndex] < nums2[secondIndex]) {
-                nums[firstIndex + secondIndex] = nums1[firstIndex];
-                firstIndex++;
-            } else if (nums1[firstIndex] >= nums2[secondIndex]) {
+            } else if (firstIndex == nums1.length || nums1.length == 0 ||
+                    (nums1.length != firstIndex && nums2.length != secondIndex && nums1[firstIndex] >= nums2[secondIndex])) {
                 nums[firstIndex + secondIndex] = nums2[secondIndex];
                 secondIndex++;
             }
         }
-        return nums.length % 2 == 0 ? (double)(nums[nums.length / 2 - 1] + nums[nums.length / 2]) / 2 : nums[nums.length / 2];
+        return nums.length % 2 == 0 ? (double) (nums[nums.length / 2 - 1] + nums[nums.length / 2]) / 2 : nums[nums.length / 2];
     }
 }
