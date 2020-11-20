@@ -1,20 +1,13 @@
 package com.wentjiang.leetcode.q1_100;
 
+import com.wentjiang.leetcode.utils.ListNode;
+
 /**
  * @author wentao.jiang
  * @date 2019/9/23 1:41 PM
  * @description
  */
 public class Question83 {
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     public static ListNode deleteDuplicates(ListNode head) {
         if (head == null) {

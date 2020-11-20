@@ -1,19 +1,13 @@
 package com.wentjiang.leetcode.q1_100;
 
+import com.wentjiang.leetcode.utils.ListNode;
+
 /**
  * @author wentaojiang
  * @date 2019/9/8 9:50 PM
  * @description
  */
 public class Question24 {
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        public ListNode(int x) {
-            val = x;
-        }
-    }
 
     public ListNode swapPairs(ListNode head) {
         ListNode preHead = new ListNode(0);

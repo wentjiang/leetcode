@@ -1,20 +1,13 @@
 package com.wentjiang.leetcode.q1_100;
 
+import com.wentjiang.leetcode.utils.ListNode;
+
 /**
  * @author wentaojiang
  * @date 2019/9/2 7:47 PM
  * @description
  */
 public class Question19 {
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     /**
      * 需要引入岗哨节点,不然出现一堆堆难解决的问题
@@ -37,20 +30,5 @@ public class Question19 {
         }
         header.next = header.next.next;
         return temp.next;
-    }
-
-    public static ListNode getListNode(int[] nums) {
-        ListNode listNode = null;
-        ListNode result = null;
-        for (int num : nums) {
-            if (listNode == null) {
-                listNode = new ListNode(num);
-                result = listNode;
-                continue;
-            }
-            listNode.next = new ListNode(num);
-            listNode = listNode.next;
-        }
-        return result;
     }
 }

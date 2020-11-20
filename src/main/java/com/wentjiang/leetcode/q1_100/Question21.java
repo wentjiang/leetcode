@@ -1,20 +1,13 @@
 package com.wentjiang.leetcode.q1_100;
 
+import com.wentjiang.leetcode.utils.ListNode;
+
 /**
  * @author wentaojiang
  * @date 2019/9/2 2:51 PM
  * @description
  */
 public class Question21 {
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode result = null;
@@ -62,20 +55,4 @@ public class Question21 {
         }
         return header;
     }
-
-    public static Question21.ListNode getListNode(int[] nums) {
-        Question21.ListNode listNode = null;
-        Question21.ListNode result = null;
-        for (int num : nums) {
-            if (listNode == null) {
-                listNode = new Question21.ListNode(num);
-                result = listNode;
-                continue;
-            }
-            listNode.next = new ListNode(num);
-            listNode = listNode.next;
-        }
-        return result;
-    }
-
 }

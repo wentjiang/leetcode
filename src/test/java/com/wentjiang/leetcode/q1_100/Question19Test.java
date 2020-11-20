@@ -1,5 +1,7 @@
 package com.wentjiang.leetcode.q1_100;
 
+import com.wentjiang.leetcode.utils.ListNode;
+import com.wentjiang.leetcode.utils.ListNodeUtil;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -21,7 +23,7 @@ public class Question19Test {
 
     @Test
     public void removeNthFromEnd1() {
-        Question19.ListNode listNode = Question19.getListNode(new int[]{1,2});
+        ListNode listNode = ListNodeUtil.createListNodeByArray(new int[]{1, 2});
         listNode = question19.removeNthFromEnd(listNode, 1);
         while (listNode != null) {
             System.out.println(listNode.val);
@@ -31,7 +33,7 @@ public class Question19Test {
 
     @Test
     public void removeNthFromEnd2() {
-        Question19.ListNode listNode = Question19.getListNode(new int[]{1});
+        ListNode listNode = ListNodeUtil.createListNodeByArray(new int[]{1});
         listNode = question19.removeNthFromEnd(listNode, 1);
         while (listNode != null) {
             System.out.println(listNode.val);
@@ -41,7 +43,7 @@ public class Question19Test {
 
     @Test
     public void removeNthFromEnd3() {
-        Question19.ListNode listNode = Question19.getListNode(new int[]{1,2,3,4,5});
+        ListNode listNode = ListNodeUtil.createListNodeByArray(new int[]{1, 2, 3, 4, 5});
         listNode = question19.removeNthFromEnd(listNode, 2);
         while (listNode != null) {
             System.out.println(listNode.val);

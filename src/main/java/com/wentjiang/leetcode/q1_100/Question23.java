@@ -1,5 +1,7 @@
 package com.wentjiang.leetcode.q1_100;
 
+import com.wentjiang.leetcode.utils.ListNode;
+
 import java.util.Objects;
 import java.util.stream.Stream;
 
@@ -9,15 +11,6 @@ import java.util.stream.Stream;
  * @description
  */
 public class Question23 {
-
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists.length == 0){

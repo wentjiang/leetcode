@@ -1,20 +1,13 @@
 package com.wentjiang.leetcode.q101_200;
 
+import com.wentjiang.leetcode.utils.ListNode;
+
 /**
  * @author wentao.jiang
  * @date 2019/11/14 3:22 PM
  * @description
  */
 public class Question109 {
-
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     public class TreeNode {
         int val;

@@ -1,5 +1,7 @@
 package com.wentjiang.leetcode.q1_100;
 
+import com.wentjiang.leetcode.utils.ListNode;
+
 /**
  * @author wentaojiang
  * @date 2019/2/24 3:07 PM
@@ -41,24 +43,4 @@ public class Question2 {
         }
         return header;
     }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        public ListNode(int x) {
-            val = x;
-        }
-
-        @Override
-        public String toString() {
-            StringBuilder str = new StringBuilder(String.valueOf(val));
-            while (next != null) {
-                str.append(next.toString());
-                next = next.next;
-            }
-            return str.toString();
-        }
-    }
-
 }
