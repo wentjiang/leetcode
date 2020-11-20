@@ -13,4 +13,10 @@ public class Question147Test {
         ListNode listNode = ListNodeUtil.createListNodeByArray(new int[]{4, 2, 1, 3});
         Assertions.assertArrayEquals(new int[]{1, 2, 3, 4}, question.insertionSortList(listNode).toArray());
     }
+
+    @Test
+    public void testCase2() {
+        ListNode listNode = ListNodeUtil.createListNodeByArray(new int[]{-1, 5, 3, 4, 0});
+        Assertions.assertArrayEquals(new int[]{-1, 0, 3, 4, 5}, question.insertionSortList(listNode).toArray());
+    }
 }

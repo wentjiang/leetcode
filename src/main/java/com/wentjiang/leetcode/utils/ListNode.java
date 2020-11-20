@@ -1,6 +1,7 @@
 package com.wentjiang.leetcode.utils;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -24,5 +25,13 @@ public class ListNode {
             current = current.next;
         }
         return list.stream().mapToInt(num -> (int) num).toArray();
+    }
+
+    @Override
+    public String toString() {
+        return "ListNode{" +
+                "val=" + val +
+                ", next.val=" + Arrays.toString(next.toArray()) +
+                '}';
     }
 }
