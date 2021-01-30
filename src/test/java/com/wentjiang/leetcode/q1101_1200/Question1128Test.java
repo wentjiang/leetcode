@@ -4,8 +4,8 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class Question_1128Test {
-    private Question_1128 question = new Question_1128();
+public class Question1128Test {
+    private Question1128 question = new Question1128();
 
     @Test
     public void numEquivDominoPairs() {

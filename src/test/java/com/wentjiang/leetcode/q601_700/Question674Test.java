@@ -3,9 +3,9 @@ package com.wentjiang.leetcode.q601_700;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 
-public class Question_674Test {
+public class Question674Test {
 
-    private Question_674 question = new Question_674();
+    private Question674 question = new Question674();
 
     @Test
     public void findLengthOfLCIS() {

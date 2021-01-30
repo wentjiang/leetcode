@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Question_1128 {
+public class Question1128 {
 
     /**
      * 暴力求解法,时间复杂度n平方,提交后计算超时

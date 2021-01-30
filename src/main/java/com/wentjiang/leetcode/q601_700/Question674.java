@@ -1,6 +1,6 @@
 package com.wentjiang.leetcode.q601_700;
 
-public class Question_674 {
+public class Question674 {
     public int findLengthOfLCIS(int[] nums) {
         if (nums.length == 0 || nums.length == 1) {
             return nums.length;
