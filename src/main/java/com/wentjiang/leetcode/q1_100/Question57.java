@@ -1,10 +1,6 @@
 package com.wentjiang.leetcode.q1_100;
 
-import com.sun.xml.internal.bind.v2.runtime.output.DOMOutput;
-
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * @author wentao.jiang
