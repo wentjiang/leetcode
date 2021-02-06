@@ -10,7 +10,6 @@ public class Question1534 {
                             Math.abs(arr[j] - arr[k]) <= b &&
                             Math.abs(arr[i] - arr[k]) <= c;
                     if (condition) {
-                        System.out.println(arr[i] + " " + arr[j] + " " + arr[k]);
                         count++;
                     }
                 }
@@ -19,5 +18,19 @@ public class Question1534 {
         return count;
     }
 
-    //todo 增加优化解法
+    public int countGoodTriplets_1(int[] arr, int a, int b, int c) {
+        int count = 0;
+        for (int i = 0; i < arr.length - 2; i++) {
+            for (int j = i + 1; j < arr.length - 1; j++) {
+                if (Math.abs(arr[i] - arr[j]) <= a) {
+                    for (int k = j + 1; k < arr.length; k++) {
+                        if (Math.abs(arr[j] - arr[k]) <= b && Math.abs(arr[i] - arr[k]) <= c) {
+                            count++;
+                        }
+                    }
+                }
+            }
+        }
+        return count;
+    }
 }
