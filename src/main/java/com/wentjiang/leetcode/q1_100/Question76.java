@@ -9,17 +9,12 @@ public class Question76 {
         if (t.length() == 0 || t.length() > s.length()) {
             return "";
         }
-        char[] allChs = s.toCharArray();
-        char[] subChs = t.toCharArray();
         Map<Character, Integer> subMap = new HashMap<>();
-        for (char ch : subChs) {
-            Integer value = subMap.get(ch);
-            if (value != null) {
-                subMap.put(ch, ++value);
-            } else {
-                subMap.put(ch, 1);
-            }
+        for (int i = 0; i < t.length(); i++) {
+            char ch = t.charAt(i);
+            subMap.put(ch, subMap.getOrDefault(ch, 0) + 1);
         }
+
         int first = 0;
         int second = 0;
         int minFirst = 0;
@@ -31,20 +26,17 @@ public class Question76 {
             if (hasAllElement(allMap, subMap)) {
                 //包含字串的字符串长度小于之前的长度
                 if ((minSecond - minFirst) > (second - first)) {
-
                     minFirst = first;
                     minSecond = second;
                 }
                 //去掉最前边的字符
-                changeKeyCount(allMap, allChs[first], false);
                 //前指针向后移动
-                first++;
+                changeKeyCount(allMap, subMap, s.charAt(first++), false);
             } else {
                 //没有包含全部的情况
                 if (second < len) {
-                    changeKeyCount(allMap, allChs[second], true);
                     //后指针向后移动
-                    second++;
+                    changeKeyCount(allMap, subMap, s.charAt(second++), true);
                 } else {
                     break;
                 }
@@ -69,24 +61,21 @@ public class Question76 {
     }
 
     /**
-     * @param map
+     * @param allMap
      * @param key
      * @param increase true 表示增加,false表示减少
      */
-    public void changeKeyCount(Map<Character, Integer> map, Character key, boolean increase) {
-        if (increase) {
-            Integer value = map.get(key);
-            if (value != null) {
-                map.put(key, ++value);
+    public void changeKeyCount(Map<Character, Integer> allMap, Map<Character, Integer> subMap, Character key, boolean increase) {
+        if (subMap.containsKey(key)) {
+            if (increase) {
+                allMap.put(key, allMap.getOrDefault(key, 0) + 1);
             } else {
-                map.put(key, 1);
-            }
-        } else {
-            Integer value = map.get(key);
-            if (value == 1) {
-                map.remove(key);
-            } else {
-                map.put(key, --value);
+                Integer value = allMap.get(key);
+                if (value == 1) {
+                    allMap.remove(key);
+                } else {
+                    allMap.put(key, --value);
+                }
             }
         }
     }
