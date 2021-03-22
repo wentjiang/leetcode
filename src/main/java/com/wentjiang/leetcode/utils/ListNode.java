@@ -17,10 +17,10 @@ public class ListNode {
         val = x;
     }
 
-    public int[] toArray(){
+    public int[] toArray() {
         List<Integer> list = new ArrayList<>();
         ListNode current = this;
-        while(current != null){
+        while (current != null) {
             list.add(current.val);
             current = current.next;
         }
@@ -29,9 +29,14 @@ public class ListNode {
 
     @Override
     public String toString() {
-        return "ListNode{" +
-                "val=" + val +
-                ", next.val=" + Arrays.toString(next.toArray()) +
-                '}';
+        if (next == null) {
+            return "ListNode{" +
+                    "val=" + val + ", next is null";
+        } else {
+            return "ListNode{" +
+                    "val=" + val +
+                    ", next.val=" + Arrays.toString(next.toArray()) +
+                    '}';
+        }
     }
 }
