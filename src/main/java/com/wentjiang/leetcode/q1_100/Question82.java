@@ -6,6 +6,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Question82 {
+    /**
+     * 没有考虑到顺序的情况
+     */
     public ListNode deleteDuplicates(ListNode head) {
         ListNode preHead = new ListNode(0);
         ListNode tempHead = preHead;
@@ -27,4 +30,22 @@ public class Question82 {
         }
         return tempHead.next;
     }
+
+    /**
+     * 考虑顺序的情况
+     */
+    public ListNode deleteDuplicates1(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode startNode = new ListNode(0, head);
+        startNode.next = head;
+        ListNode prePreHead = startNode;
+        //当前节点不为null的情况,向后遍历
+        while (head != null) {
+
+        }
+        return startNode.next;
+    }
+
 }

@@ -17,6 +17,11 @@ public class ListNode {
         val = x;
     }
 
+    public ListNode(int x, ListNode next) {
+        val = x;
+        this.next = next;
+    }
+
     public int[] toArray() {
         List<Integer> list = new ArrayList<>();
         ListNode current = this;

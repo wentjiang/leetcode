@@ -13,6 +13,9 @@ class Question82Test {
         Assertions.assertArrayEquals(new int[]{1, 2, 5},
                 ListNodeUtil.createArrayByListNode(
                         question82.deleteDuplicates(ListNodeUtil.createListNodeByArray(new int[]{1, 2, 3, 3, 4, 4, 5}))));
+        Assertions.assertArrayEquals(new int[]{1, 2, 5},
+                ListNodeUtil.createArrayByListNode(
+                        question82.deleteDuplicates1(ListNodeUtil.createListNodeByArray(new int[]{1, 2, 3, 3, 4, 4, 5}))));
     }
 
     @Test
@@ -20,5 +23,9 @@ class Question82Test {
         Assertions.assertArrayEquals(new int[]{2, 3},
                 ListNodeUtil.createArrayByListNode(
                         question82.deleteDuplicates(ListNodeUtil.createListNodeByArray(new int[]{1, 1, 1, 2, 3}))));
+        Assertions.assertArrayEquals(new int[]{2, 3},
+                ListNodeUtil.createArrayByListNode(
+                        question82.deleteDuplicates1(ListNodeUtil.createListNodeByArray(new int[]{1, 1, 1, 2, 3}))));
+
     }
 }
