@@ -10,14 +10,12 @@ public class Question783 {
     static int min = Integer.MAX_VALUE;
 
     public int minDiffInBST(TreeNode root) {
-
         //遍历,排序,求值
         List<Integer> nums = getAllTreeNodeValues(root);
         nums.sort(Comparator.naturalOrder());
-        nums.stream().reduce((i, j) -> {
-            min = Math.min(min, Math.abs(i - j));
-            return j;
-        });
+        for (int i = 1; i < nums.size(); i++) {
+            min = Math.min(min, Math.abs(nums.get(i) - nums.get(i - 1)));
+        }
         return min;
     }
 
