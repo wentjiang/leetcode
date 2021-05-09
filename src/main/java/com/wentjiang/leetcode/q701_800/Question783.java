@@ -7,9 +7,11 @@ import java.util.Comparator;
 import java.util.List;
 
 public class Question783 {
-    static int min = Integer.MAX_VALUE;
+
 
     public int minDiffInBST(TreeNode root) {
+        int min = Integer.MAX_VALUE;
+
         //遍历,排序,求值
         List<Integer> nums = getAllTreeNodeValues(root);
         nums.sort(Comparator.naturalOrder());
