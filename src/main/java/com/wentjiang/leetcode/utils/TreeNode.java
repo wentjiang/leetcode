@@ -15,24 +15,48 @@ public class TreeNode {
     }
 
     /**
-     * 根据广度优先遍历生成 treeNode
+     * index + 1 的二进制的倒序为当前元素所放置的位置
      *
-     * @param nums 广度数组,可以直接使用leetcode页面上给的数组
-     * @return 返回当前的treeNode
+     * @param array
+     * @return
      */
-    public static TreeNode createTreeNodeByArray(Integer[] nums) {
-        int length = nums.length;
-        int layer = Double.valueOf(Math.ceil(Math.log(length - 1) / Math.log(2))).intValue();
-        return new TreeNode(0);
-    }
+    public static TreeNode createTreeFromArray(Integer[] array) {
+        TreeNode root = new TreeNode(array[0]);
 
-    public static void main(String[] args) {
-        for (int i = 0; i < 18; i++) {
-            int layer = Double.valueOf(Math.ceil(Math.log(i - 1) / Math.log(2))).intValue();
-            System.out.println(i + "   layer  " + layer);
+        for (int i = 1; i < array.length; i++) {
+            String binaryString = Integer.toBinaryString(i + 1);
+            char[] chars = binaryString.toCharArray();
+            TreeNode parentNode = root;
+
+            for (int j = 1; j < chars.length - 1; j++) {
+                if (parentNode == null) {
+                    break;
+                }
+                if (chars[j] == '1') {
+                    parentNode = parentNode.left;
+                }
+                if (chars[j] == '0') {
+                    parentNode = parentNode.right;
+                }
+            }
+
+            if (array[i] != null && parentNode != null) {
+                if (chars[chars.length - 1] == '1') {
+                    parentNode.right = new TreeNode(array[i]);
+                } else {
+                    parentNode.left = new TreeNode(array[i]);
+                }
+            }
         }
-
+        return root;
     }
 
+    @Override
+    public String toString() {
+        String leftString, rightString;
+        leftString = left == null ? "null" : left.toString().substring(1, left.toString().length() - 1);
+        rightString = right == null ? "null" : right.toString().substring(1, right.toString().length() - 1);
+        return "[" + val + "," + leftString + "," + rightString + "]";
+    }
 
 }
