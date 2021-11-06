@@ -16,16 +16,16 @@ public class Question171Test {
 
     @Test
     public void titleToNumber() {
-        assertEquals(1,question171.titleToNumber("A"));
+        assertEquals(1, question171.titleToNumber("A"));
     }
 
     @Test
     public void titleToNumber1() {
-        assertEquals(28,question171.titleToNumber("AB"));
+        assertEquals(28, question171.titleToNumber("AB"));
     }
 
     @Test
     public void titleToNumber2() {
-        assertEquals(701,question171.titleToNumber("ZY"));
+        assertEquals(701, question171.titleToNumber("ZY"));
     }
 }

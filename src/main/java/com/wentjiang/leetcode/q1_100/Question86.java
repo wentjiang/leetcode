@@ -8,11 +8,11 @@ public class Question86 {
         ListNode smallHead = small;
         ListNode large = new ListNode(0);
         ListNode largeHead = large;
-        while(head != null){
-            if (head.val < x){
+        while (head != null) {
+            if (head.val < x) {
                 small.next = head;
                 small = head;
-            }else{
+            } else {
                 large.next = head;
                 large = head;
             }

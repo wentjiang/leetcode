@@ -8,7 +8,9 @@ import static org.junit.Assert.*;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/11/15 3:14 PM
+ * 
  * @description
  */
 public class Question64Test {
@@ -22,9 +24,6 @@ public class Question64Test {
 
     @Test
     public void minPathSum() {
-        Assert.assertEquals(7, question64.minPathSum(
-            new int[][]{{1, 3, 1},
-                {1, 5, 1},
-                {4, 2, 1}}));
+        Assert.assertEquals(7, question64.minPathSum(new int[][] { { 1, 3, 1 }, { 1, 5, 1 }, { 4, 2, 1 } }));
     }
 }

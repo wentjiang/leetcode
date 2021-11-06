@@ -10,9 +10,7 @@ public class Question61Test {
 
     @Test
     public void rotateRight() {
-        Assertions.assertArrayEquals(new int[]{4, 5, 1, 2, 3},
-                ListNodeUtil.createArrayByListNode(
-                        question61.rotateRight(ListNodeUtil.createListNodeByArray(new int[]{1, 2, 3, 4, 5}),
-                                2)));
+        Assertions.assertArrayEquals(new int[] { 4, 5, 1, 2, 3 }, ListNodeUtil.createArrayByListNode(
+                question61.rotateRight(ListNodeUtil.createListNodeByArray(new int[] { 1, 2, 3, 4, 5 }), 2)));
     }
 }

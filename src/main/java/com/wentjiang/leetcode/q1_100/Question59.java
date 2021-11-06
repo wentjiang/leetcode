@@ -6,13 +6,13 @@ public class Question59 {
         int[][] result = new int[n][n];
         int i = 0;
         int j = 0;
-        //方向 0 向右 1 向下 2 向左 3 向上
+        // 方向 0 向右 1 向下 2 向左 3 向上
         int direction = 0;
         for (int index = 0; index < max; index++) {
             result[i][j] = index + 1;
-            //向右
+            // 向右
             if (direction == 0) {
-                //换方向的情况
+                // 换方向的情况
                 if (j == n - 1 || result[i][j + 1] != 0) {
                     direction = 1;
                     i++;
@@ -21,7 +21,7 @@ public class Question59 {
                 }
                 continue;
             }
-            //向下
+            // 向下
             if (direction == 1) {
                 if (i == n - 1 || result[i + 1][j] != 0) {
                     direction = 2;
@@ -31,7 +31,7 @@ public class Question59 {
                 }
                 continue;
             }
-            //向左
+            // 向左
             if (direction == 2) {
                 if (j == 0 || result[i][j - 1] != 0) {
                     direction = 3;
@@ -42,7 +42,7 @@ public class Question59 {
                 continue;
             }
 
-            //向上
+            // 向上
             if (direction == 3) {
                 if (i == 0 || result[i - 1][j] != 0) {
                     direction = 0;

@@ -4,3 +4,8 @@
 
 ## 使用测试驱动开发方式进行实践
 
+## format code
+
+```bash
+mvn formatter:format
+```

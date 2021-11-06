@@ -5,7 +5,7 @@ public class Question999 {
         int count = 0;
         int length = 8;
         int rookI = 0, rookJ = 0;
-        //找车
+        // 找车
         for (int i = 0; i < length; i++) {
             for (int j = 0; j < length; j++) {
                 if (board[i][j] == 'R') {
@@ -15,7 +15,7 @@ public class Question999 {
             }
         }
 
-        //向上搜索
+        // 向上搜索
         for (int j = rookJ - 1; j >= 0; j--) {
             if (board[rookI][j] == 'p') {
                 count++;
@@ -25,7 +25,7 @@ public class Question999 {
                 break;
             }
         }
-        //向下搜索
+        // 向下搜索
         for (int j = rookJ + 1; j < 8; j++) {
             if (board[rookI][j] == 'p') {
                 count++;
@@ -35,7 +35,7 @@ public class Question999 {
                 break;
             }
         }
-        //向左搜索
+        // 向左搜索
         for (int i = rookI - 1; i >= 0; i--) {
             if (board[i][rookJ] == 'p') {
                 count++;
@@ -45,7 +45,7 @@ public class Question999 {
                 break;
             }
         }
-        //向右搜索
+        // 向右搜索
         for (int i = rookI + 1; i < 8; i++) {
             if (board[i][rookJ] == 'p') {
                 count++;

@@ -14,9 +14,9 @@ public class Question374 {
         while (start < end) {
             int mid = start + (end - start) / 2;
             int result = guess(mid);
-            if (result <= 0){
+            if (result <= 0) {
                 end = mid;
-            }else {
+            } else {
                 start = mid + 1;
             }
         }

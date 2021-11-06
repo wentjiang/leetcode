@@ -7,7 +7,9 @@ import static org.junit.Assert.*;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2020/1/30 7:31 PM
+ * 
  * @description
  */
 public class Question154Test {
@@ -21,11 +23,11 @@ public class Question154Test {
 
     @Test
     public void findMin() {
-        assertEquals(1,question154.findMin(new int[]{1,3,5}));
+        assertEquals(1, question154.findMin(new int[] { 1, 3, 5 }));
     }
 
     @Test
     public void findMin1() {
-        assertEquals(0,question154.findMin(new int[]{2,2,2,0,1}));
+        assertEquals(0, question154.findMin(new int[] { 2, 2, 2, 0, 1 }));
     }
 }

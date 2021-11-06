@@ -7,7 +7,9 @@ import org.junit.Test;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/8/26 9:25 PM
+ * 
  * @description
  */
 public class Question1Test {
@@ -21,6 +23,6 @@ public class Question1Test {
 
     @Test
     public void twoSum() {
-        Assert.assertArrayEquals(new int[]{0, 1}, question1.twoSum(new int[]{2, 7, 11, 15}, 9));
+        Assert.assertArrayEquals(new int[] { 0, 1 }, question1.twoSum(new int[] { 2, 7, 11, 15 }, 9));
     }
 }

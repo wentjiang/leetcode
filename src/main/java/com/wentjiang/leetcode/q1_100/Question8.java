@@ -6,7 +6,9 @@ import java.util.Set;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/9/4 7:24 PM
+ * 
  * @description
  */
 public class Question8 {
@@ -19,11 +21,11 @@ public class Question8 {
         boolean isSignFirst = true;
         char[] chars = str.trim().toCharArray();
         for (char ch : chars) {
-            //判断字符是否在集合中
+            // 判断字符是否在集合中
             if (!set.contains(ch)) {
                 break;
             }
-            //添加符号
+            // 添加符号
             if (('-' == ch || '+' == ch)) {
                 if (!isSignFirst) {
                     break;
@@ -37,7 +39,7 @@ public class Question8 {
                 }
                 continue;
             }
-            //如果是数字开头,且为0,跳过
+            // 如果是数字开头,且为0,跳过
             if (isFirst && '0' == ch) {
                 isSignFirst = false;
                 continue;

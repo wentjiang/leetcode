@@ -5,7 +5,9 @@ import java.util.List;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/10/2 10:37 AM
+ * 
  * @description
  */
 public class Question107 {
@@ -26,7 +28,7 @@ public class Question107 {
         result = new ArrayList<>();
         viewTree(root, 0);
         List<List<Integer>> newResult = new ArrayList<>();
-        for (int i = result.size()-1; i >= 0; i--) {
+        for (int i = result.size() - 1; i >= 0; i--) {
             newResult.add(result.get(i));
         }
         return newResult;

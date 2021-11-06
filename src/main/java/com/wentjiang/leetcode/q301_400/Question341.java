@@ -11,8 +11,7 @@ public class Question341 {
 }
 
 /**
- * 1.先将嵌套结构转换为一维结构,树转链表
- * 2.使用list的迭代器
+ * 1.先将嵌套结构转换为一维结构,树转链表 2.使用list的迭代器
  */
 class NestedIterator implements Iterator<Integer> {
 
@@ -20,7 +19,7 @@ class NestedIterator implements Iterator<Integer> {
     Iterator<Integer> iterator;
 
     public NestedIterator(List<NestedInteger> nestedList) {
-        //放在一个list中
+        // 放在一个list中
         this.list = addAllNumbers(nestedList);
         iterator = list.listIterator();
     }
@@ -47,4 +46,3 @@ class NestedIterator implements Iterator<Integer> {
         return iterator.hasNext();
     }
 }
-

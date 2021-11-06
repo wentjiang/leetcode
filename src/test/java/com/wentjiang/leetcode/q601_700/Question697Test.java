@@ -9,11 +9,11 @@ class Question697Test {
 
     @Test
     void findShortestSubArray() {
-        Assertions.assertEquals(6, question697.findShortestSubArray(new int[]{1, 2, 2, 3, 1, 4, 2}));
+        Assertions.assertEquals(6, question697.findShortestSubArray(new int[] { 1, 2, 2, 3, 1, 4, 2 }));
     }
 
     @Test
     void findShortestSubArray_1() {
-        Assertions.assertEquals(2, question697.findShortestSubArray(new int[]{1, 2, 2, 3, 1}));
+        Assertions.assertEquals(2, question697.findShortestSubArray(new int[] { 1, 2, 2, 3, 1 }));
     }
 }

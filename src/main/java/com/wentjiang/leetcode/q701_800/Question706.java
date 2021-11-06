@@ -25,12 +25,12 @@ class MyHashMap {
      * value will always be non-negative.
      */
     public void put(int key, int value) {
-        //容量不够进行扩容的情况
+        // 容量不够进行扩容的情况
         if (currentUsedCapacity / storageFactor >= capacity) {
             extendCapacity();
         }
 
-        //正常添加的情况
+        // 正常添加的情况
         int index = getHashIndex(key, capacity);
         if (entries[index] != null && entries[index].getKey() == key) {
             entries[index] = new Entry(key, value);
@@ -49,7 +49,6 @@ class MyHashMap {
     private int getHashIndex(int key, int capacity) {
         return key * 2 % capacity;
     }
-
 
     private void extendCapacity() {
         int extendCapacity = capacity * 2;
@@ -70,7 +69,6 @@ class MyHashMap {
         entries = newEntries;
         capacity = extendCapacity;
     }
-
 
     /**
      * Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key

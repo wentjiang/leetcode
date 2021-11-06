@@ -7,7 +7,9 @@ import static org.junit.Assert.*;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/10/9 6:10 PM
+ * 
  * @description
  */
 public class Question32Test {
@@ -21,11 +23,11 @@ public class Question32Test {
 
     @Test
     public void longestValidParentheses() {
-        assertEquals(2,question32.longestValidParentheses("(()"));
+        assertEquals(2, question32.longestValidParentheses("(()"));
     }
 
     @Test
     public void longestValidParentheses1() {
-        assertEquals(4,question32.longestValidParentheses(")()())"));
+        assertEquals(4, question32.longestValidParentheses(")()())"));
     }
 }

@@ -2,7 +2,9 @@ package com.wentjiang.leetcode.q101_200;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2020/1/30 10:20 AM
+ * 
  * @description
  */
 public class Question152 {
@@ -12,7 +14,7 @@ public class Question152 {
             int num = 1;
             for (int j = i; j < nums.length; j++) {
                 num = nums[j] * num;
-                if (num>max){
+                if (num > max) {
                     max = num;
                 }
             }

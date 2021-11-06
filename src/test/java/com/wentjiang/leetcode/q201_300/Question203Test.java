@@ -13,7 +13,8 @@ public class Question203Test {
 
     @Test
     public void removeElements() {
-        ListNode result = question203.removeElements(ListNodeUtil.createListNodeByArray(new int[]{1, 2, 6, 3, 4, 5, 6}), 6);
-        Assertions.assertArrayEquals(new int[]{1, 2, 3, 4, 5}, ListNodeUtil.createArrayByListNode(result));
+        ListNode result = question203
+                .removeElements(ListNodeUtil.createListNodeByArray(new int[] { 1, 2, 6, 3, 4, 5, 6 }), 6);
+        Assertions.assertArrayEquals(new int[] { 1, 2, 3, 4, 5 }, ListNodeUtil.createArrayByListNode(result));
     }
 }

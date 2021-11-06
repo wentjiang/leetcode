@@ -9,7 +9,9 @@ import static org.junit.Assert.*;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/9/2 8:00 PM
+ * 
  * @description
  */
 public class Question19Test {
@@ -23,7 +25,7 @@ public class Question19Test {
 
     @Test
     public void removeNthFromEnd1() {
-        ListNode listNode = ListNodeUtil.createListNodeByArray(new int[]{1, 2});
+        ListNode listNode = ListNodeUtil.createListNodeByArray(new int[] { 1, 2 });
         listNode = question19.removeNthFromEnd(listNode, 1);
         while (listNode != null) {
             System.out.println(listNode.val);
@@ -33,7 +35,7 @@ public class Question19Test {
 
     @Test
     public void removeNthFromEnd2() {
-        ListNode listNode = ListNodeUtil.createListNodeByArray(new int[]{1});
+        ListNode listNode = ListNodeUtil.createListNodeByArray(new int[] { 1 });
         listNode = question19.removeNthFromEnd(listNode, 1);
         while (listNode != null) {
             System.out.println(listNode.val);
@@ -43,7 +45,7 @@ public class Question19Test {
 
     @Test
     public void removeNthFromEnd3() {
-        ListNode listNode = ListNodeUtil.createListNodeByArray(new int[]{1, 2, 3, 4, 5});
+        ListNode listNode = ListNodeUtil.createListNodeByArray(new int[] { 1, 2, 3, 4, 5 });
         listNode = question19.removeNthFromEnd(listNode, 2);
         while (listNode != null) {
             System.out.println(listNode.val);

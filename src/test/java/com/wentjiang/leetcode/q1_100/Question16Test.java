@@ -8,7 +8,9 @@ import static org.junit.Assert.*;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/8/30 8:34 AM
+ * 
  * @description
  */
 public class Question16Test {
@@ -21,16 +23,16 @@ public class Question16Test {
 
     @Test
     public void threeSumClosest1() {
-        Assert.assertEquals(2, question16.threeSumClosest(new int[]{-1, 2, 1, -4}, 1));
+        Assert.assertEquals(2, question16.threeSumClosest(new int[] { -1, 2, 1, -4 }, 1));
     }
 
     @Test
     public void threeSumClosest2() {
-        Assert.assertEquals(0, question16.threeSumClosest(new int[]{0, 2, 1, -3}, 0));
+        Assert.assertEquals(0, question16.threeSumClosest(new int[] { 0, 2, 1, -3 }, 0));
     }
 
     @Test
     public void threeSumClosest3() {
-        Assert.assertEquals(0, question16.threeSumClosest(new int[]{0, 2, 1, -3}, 1));
+        Assert.assertEquals(0, question16.threeSumClosest(new int[] { 0, 2, 1, -3 }, 1));
     }
 }

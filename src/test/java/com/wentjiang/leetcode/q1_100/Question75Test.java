@@ -6,7 +6,9 @@ import org.junit.Test;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/11/19 1:59 PM
+ * 
  * @description
  */
 public class Question75Test {
@@ -20,36 +22,36 @@ public class Question75Test {
 
     @Test
     public void sortColors() {
-        int[] array = new int[]{2, 0, 2, 1, 1, 0};
+        int[] array = new int[] { 2, 0, 2, 1, 1, 0 };
         question75.sortColors(array);
-        Assert.assertArrayEquals(new int[]{0, 0, 1, 1, 2, 2}, array);
+        Assert.assertArrayEquals(new int[] { 0, 0, 1, 1, 2, 2 }, array);
     }
 
     @Test
     public void sortColors1() {
-        int[] array = new int[]{2, 0, 1};
+        int[] array = new int[] { 2, 0, 1 };
         question75.sortColors(array);
-        Assert.assertArrayEquals(new int[]{0, 1, 2}, array);
+        Assert.assertArrayEquals(new int[] { 0, 1, 2 }, array);
     }
 
     @Test
     public void sortColors2() {
-        int[] array = new int[]{2, 1};
+        int[] array = new int[] { 2, 1 };
         question75.sortColors(array);
-        Assert.assertArrayEquals(new int[]{1, 2}, array);
+        Assert.assertArrayEquals(new int[] { 1, 2 }, array);
     }
 
     @Test
     public void sortColors3() {
-        int[] array = new int[]{1, 0, 0};
+        int[] array = new int[] { 1, 0, 0 };
         question75.sortColors(array);
-        Assert.assertArrayEquals(new int[]{0, 0, 1}, array);
+        Assert.assertArrayEquals(new int[] { 0, 0, 1 }, array);
     }
 
     @Test
     public void sortColors4() {
-        int[] array = new int[]{1, 2};
+        int[] array = new int[] { 1, 2 };
         question75.sortColors(array);
-        Assert.assertArrayEquals(new int[]{1, 2}, array);
+        Assert.assertArrayEquals(new int[] { 1, 2 }, array);
     }
 }

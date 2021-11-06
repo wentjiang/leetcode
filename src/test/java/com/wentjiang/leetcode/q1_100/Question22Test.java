@@ -7,7 +7,9 @@ import java.util.List;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/9/2 4:54 PM
+ * 
  * @description
  */
 public class Question22Test {
@@ -27,14 +29,14 @@ public class Question22Test {
     }
 
     @Test
-    public void generateParenthesis1(){
+    public void generateParenthesis1() {
         List<String> result = question22.generateParenthesis1(4);
         System.out.println(result);
         System.out.println(result.size());
     }
 
     @Test
-    public void generateParenthesis2(){
+    public void generateParenthesis2() {
         List<String> result = question22.generateParenthesis2(4);
         System.out.println(result);
         System.out.println(result.size());

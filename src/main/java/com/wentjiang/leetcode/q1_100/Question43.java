@@ -2,7 +2,9 @@ package com.wentjiang.leetcode.q1_100;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/9/19 11:48 AM
+ * 
  * @description
  */
 public class Question43 {
@@ -38,7 +40,7 @@ public class Question43 {
         stringBuilder = new StringBuilder();
         for (int i = 1; i <= maxLength; i++) {
             int num = Integer.parseInt(String.valueOf(tempResult.charAt(maxLength - i)))
-                + Integer.parseInt(String.valueOf(sumResult.charAt(maxLength - i)));
+                    + Integer.parseInt(String.valueOf(sumResult.charAt(maxLength - i)));
             if (carry) {
                 num = num + 1;
             }

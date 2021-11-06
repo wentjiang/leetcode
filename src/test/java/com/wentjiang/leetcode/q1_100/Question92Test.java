@@ -10,8 +10,7 @@ class Question92Test {
 
     @Test
     void reverseBetween() {
-        Assertions.assertArrayEquals(new int[]{1, 4, 3, 2, 5},
-                ListNodeUtil.createArrayByListNode(
-                        question92.reverseBetween(ListNodeUtil.createListNodeByArray(new int[]{1, 2, 3, 4, 5}), 2, 4)));
+        Assertions.assertArrayEquals(new int[] { 1, 4, 3, 2, 5 }, ListNodeUtil.createArrayByListNode(
+                question92.reverseBetween(ListNodeUtil.createListNodeByArray(new int[] { 1, 2, 3, 4, 5 }), 2, 4)));
     }
 }

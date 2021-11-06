@@ -7,7 +7,9 @@ import static org.junit.Assert.*;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/11/9 11:27 AM
+ * 
  * @description
  */
 public class Question106Test {
@@ -21,6 +23,6 @@ public class Question106Test {
 
     @Test
     public void buildTree() {
-        question106.buildTree(new int[]{9, 3, 15, 20, 7}, new int[]{9, 15, 7, 20, 3});
+        question106.buildTree(new int[] { 9, 3, 15, 20, 7 }, new int[] { 9, 15, 7, 20, 3 });
     }
 }

@@ -2,7 +2,9 @@ package com.wentjiang.leetcode.q101_200;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/10/3 9:35 PM
+ * 
  * @description 使用Boyer-Moore 投票算法
  */
 public class Question169 {

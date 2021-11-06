@@ -8,15 +8,15 @@ public class Question645 {
     public int[] findErrorNums(int[] nums) {
         int[] result = new int[2];
         Arrays.sort(nums);
-        //前一个数
+        // 前一个数
         int prev = 0;
         for (int i = 0; i < nums.length; i++) {
-            //当前数
+            // 当前数
             int curr = nums[i];
-            //当前数与前一个数重复,则为重复的数
+            // 当前数与前一个数重复,则为重复的数
             if (curr == prev) {
                 result[0] = prev;
-                //当前数-前一个数>1 则缺少前一个数+1
+                // 当前数-前一个数>1 则缺少前一个数+1
             } else if (curr - prev > 1) {
                 result[1] = prev + 1;
             }

@@ -5,11 +5,12 @@ import java.util.List;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/10/11 11:02 AM
+ * 
  * @description
  */
 public class Question113 {
-
 
     public class TreeNode {
         int val;
@@ -40,7 +41,7 @@ public class Question113 {
         }
         viewTree(root.left, current, currentSum, sum);
         viewTree(root.right, current, currentSum, sum);
-        //返回时将current还原
+        // 返回时将current还原
         current.remove(current.size() - 1);
     }
 }

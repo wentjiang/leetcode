@@ -9,26 +9,26 @@ public class Question896Test {
 
     @Test
     public void isMonotonic() {
-        Assertions.assertTrue(question896.isMonotonic(new int[]{1, 2, 2, 3}));
+        Assertions.assertTrue(question896.isMonotonic(new int[] { 1, 2, 2, 3 }));
     }
 
     @Test
     public void isMonotonic1() {
-        Assertions.assertTrue(question896.isMonotonic(new int[]{6, 5, 4, 4}));
+        Assertions.assertTrue(question896.isMonotonic(new int[] { 6, 5, 4, 4 }));
     }
 
     @Test
     public void isMonotonic2() {
-        Assertions.assertFalse(question896.isMonotonic(new int[]{1, 3, 2}));
+        Assertions.assertFalse(question896.isMonotonic(new int[] { 1, 3, 2 }));
     }
 
     @Test
     public void isMonotonic3() {
-        Assertions.assertTrue(question896.isMonotonic(new int[]{1, 2, 4, 5}));
+        Assertions.assertTrue(question896.isMonotonic(new int[] { 1, 2, 4, 5 }));
     }
 
     @Test
     public void isMonotonic4() {
-        Assertions.assertTrue(question896.isMonotonic(new int[]{1, 1, 1}));
+        Assertions.assertTrue(question896.isMonotonic(new int[] { 1, 1, 1 }));
     }
 }

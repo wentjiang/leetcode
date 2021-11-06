@@ -4,14 +4,14 @@ import com.wentjiang.leetcode.utils.ListNode;
 
 public class Question141 {
     public boolean hasCycle(ListNode head) {
-        if (head == null || head.next == null){
+        if (head == null || head.next == null) {
             return false;
         }
         ListNode first = head.next;
         ListNode second = head;
 
-        while(first!= second){
-            if (first.next == null || first.next.next == null){
+        while (first != second) {
+            if (first.next == null || first.next.next == null) {
                 return false;
             }
             first = first.next.next;

@@ -6,7 +6,9 @@ import java.util.List;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2020/1/27 11:59 AM
+ * 
  * @description
  */
 public class ListNode {
@@ -35,13 +37,9 @@ public class ListNode {
     @Override
     public String toString() {
         if (next == null) {
-            return "ListNode{" +
-                    "val=" + val + ", next is null";
+            return "ListNode{" + "val=" + val + ", next is null";
         } else {
-            return "ListNode{" +
-                    "val=" + val +
-                    ", next.val=" + Arrays.toString(next.toArray()) +
-                    '}';
+            return "ListNode{" + "val=" + val + ", next.val=" + Arrays.toString(next.toArray()) + '}';
         }
     }
 }

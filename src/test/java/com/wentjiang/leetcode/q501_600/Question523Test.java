@@ -30,14 +30,11 @@ public class Question523Test {
     }
 
     static Stream<Arguments> resultAndParams() {
-        return Stream.of(
-                Arguments.arguments(true, new int[]{23, 2, 4, 6, 7}, 6),
-                Arguments.arguments(true, new int[]{23, 2, 6, 4, 7}, 6),
-                Arguments.arguments(false, new int[]{23, 2, 6, 4, 7}, 13),
-                Arguments.arguments(true, new int[]{23, 2, 4, 6, 6}, 7),
-                Arguments.arguments(true, new int[]{2, 4, 3}, 6),
-                Arguments.arguments(false, new int[]{0}, 1),
-                Arguments.arguments(true, new int[]{0, 0}, 1)
-        );
+        return Stream.of(Arguments.arguments(true, new int[] { 23, 2, 4, 6, 7 }, 6),
+                Arguments.arguments(true, new int[] { 23, 2, 6, 4, 7 }, 6),
+                Arguments.arguments(false, new int[] { 23, 2, 6, 4, 7 }, 13),
+                Arguments.arguments(true, new int[] { 23, 2, 4, 6, 6 }, 7),
+                Arguments.arguments(true, new int[] { 2, 4, 3 }, 6), Arguments.arguments(false, new int[] { 0 }, 1),
+                Arguments.arguments(true, new int[] { 0, 0 }, 1));
     }
 }

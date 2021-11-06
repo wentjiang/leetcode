@@ -11,6 +11,7 @@ public class Question1128 {
      * 暴力求解法,时间复杂度n平方,提交后计算超时
      *
      * @param dominoes
+     * 
      * @return
      */
     public int numEquivDominoPairs(int[][] dominoes) {
@@ -22,8 +23,8 @@ public class Question1128 {
             int[] dominoeI = dominoes[i];
             for (int j = i + 1; j < dominoes.length; j++) {
                 int[] dominoeJ = dominoes[j];
-                if ((dominoeI[0] == dominoeJ[0] && dominoeI[1] == dominoeJ[1]) ||
-                        (dominoeI[1] == dominoeJ[0] && dominoeI[0] == dominoeJ[1])) {
+                if ((dominoeI[0] == dominoeJ[0] && dominoeI[1] == dominoeJ[1])
+                        || (dominoeI[1] == dominoeJ[0] && dominoeI[0] == dominoeJ[1])) {
                     count++;
                 }
             }
@@ -35,6 +36,7 @@ public class Question1128 {
      * 使用map做缓存,每次遍历当前数字开头的所有数字的数组,时间复杂度,n平方,但相对于上边的写法有提升
      *
      * @param dominoes
+     * 
      * @return
      */
     public int numEquivDominoPairs1(int[][] dominoes) {
@@ -75,13 +77,14 @@ public class Question1128 {
      * 类似上边的方法使用嵌套map做缓存,时间复杂度n,代码复杂度过高,不做实现
      *
      * @param dominoes
+     * 
      * @return
      */
     public int numEquivDominoPairs2(int[][] dominoes) {
         if (dominoes.length < 2) {
             return 0;
         }
-        //第一个数       第二个数    出现次数
+        // 第一个数 第二个数 出现次数
         Map<Integer, Map<Integer, Integer>> cache = new HashMap<>();
 
         return 0;
@@ -97,6 +100,5 @@ public class Question1128 {
         }
         return count;
     }
-
 
 }

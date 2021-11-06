@@ -2,7 +2,9 @@ package com.wentjiang.leetcode.q1_100;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/9/4 9:51 AM
+ * 
  * @description 暴利破解法,时间复杂度n^3 过长的字符串将不能解析
  */
 public class Question5_1 {

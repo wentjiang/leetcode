@@ -15,7 +15,7 @@ public class Question228Test {
 
     @Test
     public void summaryRanges() {
-        int[] nums = new int[]{0, 1, 2, 4, 5, 7};
+        int[] nums = new int[] { 0, 1, 2, 4, 5, 7 };
         List<String> expectResult = Arrays.asList("0->2", "4->5", "7");
         Assert.assertEquals(expectResult, question228.summaryRanges(nums));
     }

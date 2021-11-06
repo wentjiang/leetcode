@@ -7,7 +7,9 @@ import static org.junit.Assert.*;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/11/15 2:13 PM
+ * 
  * @description
  */
 public class Question56Test {
@@ -21,6 +23,6 @@ public class Question56Test {
 
     @Test
     public void merge() {
-        question56.merge(new int[][]{{1, 3}, {2, 6}, {8, 10}, {15, 18}});
+        question56.merge(new int[][] { { 1, 3 }, { 2, 6 }, { 8, 10 }, { 15, 18 } });
     }
 }

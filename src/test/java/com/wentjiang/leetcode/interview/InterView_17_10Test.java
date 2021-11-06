@@ -11,17 +11,17 @@ public class InterView_17_10Test {
 
     @Test
     public void majorityElement() {
-        Assertions.assertEquals(5,interView_17_10.majorityElement(new int[]{1,2,5,9,5,9,5,5,5}));
+        Assertions.assertEquals(5, interView_17_10.majorityElement(new int[] { 1, 2, 5, 9, 5, 9, 5, 5, 5 }));
     }
 
     @Test
     public void majorityElement1() {
-        Assertions.assertEquals(-1,interView_17_10.majorityElement(new int[]{3,2}));
+        Assertions.assertEquals(-1, interView_17_10.majorityElement(new int[] { 3, 2 }));
     }
 
     @Test
     public void majorityElement2() {
-        Assertions.assertEquals(2,interView_17_10.majorityElement(new int[]{2,2,1,1,1,2,2}));
+        Assertions.assertEquals(2, interView_17_10.majorityElement(new int[] { 2, 2, 1, 1, 1, 2, 2 }));
     }
 
 }

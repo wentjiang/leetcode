@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Question914 {
     public boolean hasGroupsSizeX(int[] deck) {
-        //先确定最小重复数量
+        // 先确定最小重复数量
         Map<Integer, Integer> map = new HashMap<>();
         for (int i : deck) {
             if (map.get(i) != null) {
@@ -15,21 +15,21 @@ public class Question914 {
             }
         }
         int minRepeat = Integer.MAX_VALUE;
-        for (Map.Entry<Integer,Integer> entry:map.entrySet()){
-            minRepeat =  Math.min(entry.getValue(),minRepeat);
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            minRepeat = Math.min(entry.getValue(), minRepeat);
         }
-        if (minRepeat < 2){
+        if (minRepeat < 2) {
             return false;
         }
         int num = map.size();
-        for (int i = 2;i<=minRepeat;i++){
+        for (int i = 2; i <= minRepeat; i++) {
             int temp = 0;
-            for (Map.Entry<Integer,Integer> entry:map.entrySet()){
-                if (entry.getValue() % i == 0){
-                    temp+=1;
+            for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+                if (entry.getValue() % i == 0) {
+                    temp += 1;
                 }
             }
-            if (temp == num){
+            if (temp == num) {
                 return true;
             }
         }

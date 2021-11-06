@@ -1,7 +1,7 @@
 package com.wentjiang.leetcode.q1401_1500;
 
 public class Question1423 {
-    //每次全部进行计算,性能有问题
+    // 每次全部进行计算,性能有问题
     public int maxScore(int[] cardPoints, int k) {
         int max = Integer.MIN_VALUE;
         for (int i = 0; i <= k; i++) {
@@ -18,7 +18,7 @@ public class Question1423 {
         return max;
     }
 
-    //使用滑动窗口进行优化
+    // 使用滑动窗口进行优化
     public int maxScore_1(int[] cardPoints, int k) {
         int current = 0;
         for (int i = 0; i < k; i++) {

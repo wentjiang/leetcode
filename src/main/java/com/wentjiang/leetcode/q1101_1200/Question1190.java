@@ -11,7 +11,7 @@ public class Question1190 {
             if (ch == ')') {
                 char top = stack.pop();
                 List<Character> tempList = new ArrayList<>();
-                while(top != '('){
+                while (top != '(') {
                     tempList.add(top);
                     top = stack.pop();
                 }

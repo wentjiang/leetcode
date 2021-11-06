@@ -7,13 +7,15 @@ import java.util.stream.Stream;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/9/9 2:57 PM
+ * 
  * @description
  */
 public class Question23 {
 
     public ListNode mergeKLists(ListNode[] lists) {
-        if (lists.length == 0){
+        if (lists.length == 0) {
             return null;
         }
         ListNode head = new ListNode(0);

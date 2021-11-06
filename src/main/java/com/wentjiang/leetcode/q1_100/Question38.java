@@ -2,7 +2,9 @@ package com.wentjiang.leetcode.q1_100;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/9/16 9:37 AM
+ * 
  * @description
  */
 public class Question38 {
@@ -24,7 +26,7 @@ public class Question38 {
             for (int j = i; j < chars.length; j++) {
                 if (chars[j] == ch) {
                     num++;
-                }else{
+                } else {
                     break;
                 }
             }

@@ -8,7 +8,9 @@ import static org.junit.Assert.*;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/9/16 10:15 AM
+ * 
  * @description
  */
 public class Question38Test {
@@ -22,11 +24,11 @@ public class Question38Test {
 
     @Test
     public void countAndSay() {
-        Assert.assertEquals("1",question38.countAndSay(1));
+        Assert.assertEquals("1", question38.countAndSay(1));
     }
 
     @Test
     public void countAndSay1() {
-        Assert.assertEquals("1211",question38.countAndSay(4));
+        Assert.assertEquals("1211", question38.countAndSay(4));
     }
 }

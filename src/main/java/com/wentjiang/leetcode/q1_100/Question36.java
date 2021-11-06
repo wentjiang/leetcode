@@ -5,7 +5,9 @@ import java.util.Set;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/9/15 2:43 PM
+ * 
  * @description
  */
 public class Question36 {
@@ -69,8 +71,10 @@ public class Question36 {
     /**
      * 方格判断
      *
-     * @param row  开始行
-     * @param line 开始列
+     * @param row
+     *            开始行
+     * @param line
+     *            开始列
      */
     public boolean isValidSquare(char[][] board, int row, int line) {
         Set<Character> set = new HashSet<>();
@@ -89,6 +93,5 @@ public class Question36 {
         }
         return true;
     }
-
 
 }

@@ -15,13 +15,13 @@ public class Question733Test {
 
     @Test
     public void floodFill1() {
-        int[][] image = {{1, 1, 1}, {1, 1, 0}, {1, 0, 1}};
+        int[][] image = { { 1, 1, 1 }, { 1, 1, 0 }, { 1, 0, 1 } };
         question733.floodFill(image, 1, 1, 2);
     }
 
     @Test
     public void floodFill2() {
-        int[][] image = {{0, 0, 0}, {0, 1, 1}};
+        int[][] image = { { 0, 0, 0 }, { 0, 1, 1 } };
         question733.floodFill(image, 1, 1, 1);
     }
 }

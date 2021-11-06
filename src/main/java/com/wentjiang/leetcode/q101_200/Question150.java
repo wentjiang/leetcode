@@ -6,7 +6,9 @@ import java.util.Set;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2020/1/29 8:39 PM
+ * 
  * @description
  */
 public class Question150 {
@@ -24,24 +26,24 @@ public class Question150 {
                 Integer num1 = numbers.pollLast();
                 Integer num2 = numbers.pollLast();
                 switch (token) {
-                    case "+":
-                        result = num2 + num1;
-                        numbers.add(result);
-                        break;
-                    case "-":
-                        result = num2 - num1;
-                        numbers.add(result);
-                        break;
-                    case "*":
-                        result = num2 * num1;
-                        numbers.add(result);
-                        break;
-                    case "/":
-                        result = num2 / num1;
-                        numbers.add(result);
-                        break;
-                    default:
-                        throw new IllegalArgumentException();
+                case "+":
+                    result = num2 + num1;
+                    numbers.add(result);
+                    break;
+                case "-":
+                    result = num2 - num1;
+                    numbers.add(result);
+                    break;
+                case "*":
+                    result = num2 * num1;
+                    numbers.add(result);
+                    break;
+                case "/":
+                    result = num2 / num1;
+                    numbers.add(result);
+                    break;
+                default:
+                    throw new IllegalArgumentException();
                 }
             } else {
                 numbers.add(Integer.parseInt(token));

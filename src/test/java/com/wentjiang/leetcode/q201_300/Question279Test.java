@@ -11,6 +11,6 @@ public class Question279Test {
 
     @Test
     public void numSquares() {
-        Assertions.assertEquals(3,question279.numSquares(12));
+        Assertions.assertEquals(3, question279.numSquares(12));
     }
 }

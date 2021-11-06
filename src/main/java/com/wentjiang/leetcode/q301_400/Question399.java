@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 /**
  * 暂时放弃
  */
@@ -13,7 +12,7 @@ public class Question399 {
     public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {
         double[] result = new double[queries.size()];
         Graph graph = generateGraph(equations, values);
-        //todo 增加计算逻辑
+        // todo 增加计算逻辑
         return result;
     }
 
@@ -40,9 +39,8 @@ public class Question399 {
     }
 
     static class Graph {
-        //起始点的边   key   边
+        // 起始点的边 key 边
         private Map<String, List<Side>> sides;
-
 
         public Graph(Map<String, List<Side>> sides) {
             this.sides = sides;

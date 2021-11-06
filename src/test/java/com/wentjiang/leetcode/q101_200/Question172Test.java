@@ -16,12 +16,12 @@ public class Question172Test {
 
     @Test
     public void trailingZeroes() {
-        assertEquals(0,question172.trailingZeroes(3));
+        assertEquals(0, question172.trailingZeroes(3));
     }
 
     @Test
     public void trailingZeroes1() {
-        assertEquals(1,question172.trailingZeroes(5));
+        assertEquals(1, question172.trailingZeroes(5));
     }
 
 }

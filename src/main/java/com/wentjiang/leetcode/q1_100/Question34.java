@@ -2,7 +2,9 @@ package com.wentjiang.leetcode.q1_100;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/9/14 10:05 AM
+ * 
  * @description
  */
 public class Question34 {
@@ -13,7 +15,7 @@ public class Question34 {
 
     public int[] searchRange(int[] nums, int target) {
 
-        int[] result = new int[]{NOT_FOUND, NOT_FOUND};
+        int[] result = new int[] { NOT_FOUND, NOT_FOUND };
         if (nums.length == 0) {
             return result;
         }

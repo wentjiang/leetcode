@@ -41,7 +41,7 @@ public class Question82 {
         ListNode startNode = new ListNode(0, head);
         startNode.next = head;
         ListNode prePreHead = startNode;
-        //当前节点不为null的情况,向后遍历
+        // 当前节点不为null的情况,向后遍历
         while (head != null) {
 
         }

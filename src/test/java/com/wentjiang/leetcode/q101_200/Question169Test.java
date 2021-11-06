@@ -8,7 +8,9 @@ import static org.junit.Assert.*;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/10/3 9:38 PM
+ * 
  * @description
  */
 public class Question169Test {
@@ -22,11 +24,11 @@ public class Question169Test {
 
     @Test
     public void majorityElement() {
-        Assert.assertEquals(2, question_169.majorityElement(new int[]{2, 2, 1, 1, 1, 2, 2}));
+        Assert.assertEquals(2, question_169.majorityElement(new int[] { 2, 2, 1, 1, 1, 2, 2 }));
     }
 
     @Test
     public void majorityElement1() {
-        Assert.assertEquals(3, question_169.majorityElement(new int[]{3, 2, 3}));
+        Assert.assertEquals(3, question_169.majorityElement(new int[] { 3, 2, 3 }));
     }
 }

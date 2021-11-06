@@ -12,7 +12,7 @@ public class Question697 {
         }
         Map<Integer, Integer> map = new HashMap<>();
         int maxCount = Integer.MIN_VALUE;
-        //先找到众数
+        // 先找到众数
         for (int num : nums) {
             int value = map.getOrDefault(num, 0) + 1;
             map.put(num, value);
@@ -30,7 +30,7 @@ public class Question697 {
             }
         }
         int result = Integer.MAX_VALUE;
-        //找到当前数第一个和最后一个的坐标差值
+        // 找到当前数第一个和最后一个的坐标差值
         for (int num : maxCountNums) {
             int first = 0;
             int last = nums.length - 1;

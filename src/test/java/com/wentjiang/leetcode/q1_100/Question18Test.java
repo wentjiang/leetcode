@@ -7,7 +7,9 @@ import static org.junit.Assert.*;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/9/8 10:06 AM
+ * 
  * @description
  */
 public class Question18Test {
@@ -21,11 +23,11 @@ public class Question18Test {
 
     @Test
     public void fourSum1() {
-        question18.fourSum(new int[]{0, 0, 0, 0}, 1);
+        question18.fourSum(new int[] { 0, 0, 0, 0 }, 1);
     }
 
     @Test
     public void fourSum2() {
-        question18.fourSum(new int[]{1, 0, -1, 0, -2, 2}, 0);
+        question18.fourSum(new int[] { 1, 0, -1, 0, -2, 2 }, 0);
     }
 }

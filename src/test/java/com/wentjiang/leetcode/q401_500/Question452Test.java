@@ -8,20 +8,18 @@ public class Question452Test {
 
     @Test
     public void test1() {
-        Assertions.assertEquals(2, question452.findMinArrowShots2(
-                new int[][]{{10, 16}, {2, 8},
-                        {1, 6}, {7, 12}}));
+        Assertions.assertEquals(2,
+                question452.findMinArrowShots2(new int[][] { { 10, 16 }, { 2, 8 }, { 1, 6 }, { 7, 12 } }));
     }
 
     @Test
     public void test2() {
-        Assertions.assertEquals(1, question452.findMinArrowShots2(
-                new int[][]{{1, 2147483647}}));
+        Assertions.assertEquals(1, question452.findMinArrowShots2(new int[][] { { 1, 2147483647 } }));
     }
 
     @Test
     public void test3() {
-        Assertions.assertEquals(2, question452.findMinArrowShots2(
-                new int[][]{{-2147483646, -2147483645}, {2147483646, 2147483647}}));
+        Assertions.assertEquals(2, question452
+                .findMinArrowShots2(new int[][] { { -2147483646, -2147483645 }, { 2147483646, 2147483647 } }));
     }
 }

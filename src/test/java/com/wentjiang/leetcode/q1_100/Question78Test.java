@@ -10,6 +10,6 @@ public class Question78Test {
 
     @Test
     public void subsets() {
-        question78.subsets(new int[]{1,2,3});
+        question78.subsets(new int[] { 1, 2, 3 });
     }
 }

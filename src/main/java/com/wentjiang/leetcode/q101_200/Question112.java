@@ -2,7 +2,9 @@ package com.wentjiang.leetcode.q101_200;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/10/3 7:29 PM
+ * 
  * @description
  */
 public class Question112 {
@@ -27,7 +29,7 @@ public class Question112 {
     }
 
     private boolean findPath(TreeNode root, int sum, int current) {
-        if (root == null){
+        if (root == null) {
             return false;
         }
         if (fetch) {

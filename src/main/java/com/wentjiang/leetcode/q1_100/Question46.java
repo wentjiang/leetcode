@@ -6,7 +6,9 @@ import java.util.List;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/9/18 8:49 PM
+ * 
  * @description
  */
 public class Question46 {
@@ -23,7 +25,7 @@ public class Question46 {
     }
 
     private void backtrack(int n, List<Integer> list, List<List<Integer>> result, int first) {
-        if (first == n){
+        if (first == n) {
             result.add(new ArrayList<>(list));
         }
         for (int i = first; i < n; i++) {

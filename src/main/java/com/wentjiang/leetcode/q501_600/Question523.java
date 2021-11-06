@@ -45,7 +45,6 @@ public class Question523 {
         return false;
     }
 
-
     /**
      * 余数+哈希表方法
      */

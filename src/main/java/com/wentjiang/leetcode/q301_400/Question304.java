@@ -29,7 +29,7 @@ class NumMatrix1 {
 
     public NumMatrix1(int[][] matrix) {
         if (matrix.length == 0) {
-            sumMatrix = new int[][]{};
+            sumMatrix = new int[][] {};
         } else {
             int rowLength = matrix.length;
             int colLength = matrix[0].length;

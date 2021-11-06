@@ -4,7 +4,9 @@ import java.util.*;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/9/2 4:53 PM
+ * 
  * @description
  */
 public class Question22 {
@@ -12,6 +14,7 @@ public class Question22 {
      * 不完备的方法
      *
      * @param n
+     * 
      * @return
      */
     public List<String> generateParenthesis(int n) {
@@ -53,7 +56,6 @@ public class Question22 {
             getResult(result, current + ")", open, close + 1, n);
         }
     }
-
 
     public List<String> generateParenthesis2(int n) {
         List<String> ans = new ArrayList();

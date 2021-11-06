@@ -4,7 +4,9 @@ import com.wentjiang.leetcode.utils.ListNode;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/11/14 3:22 PM
+ * 
  * @description
  */
 public class Question109 {
@@ -20,10 +22,11 @@ public class Question109 {
     }
 
     /**
-     * 使用双指针先寻找中间节点
-     * [-10, -3, 0, 5, 9],
+     * 使用双指针先寻找中间节点 [-10, -3, 0, 5, 9],
      *
-     * @param head 头指针
+     * @param head
+     *            头指针
+     * 
      * @return
      */
     public TreeNode sortedListToBST(ListNode head) {

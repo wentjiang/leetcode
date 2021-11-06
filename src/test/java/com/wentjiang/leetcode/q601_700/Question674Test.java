@@ -9,7 +9,7 @@ public class Question674Test {
 
     @Test
     public void findLengthOfLCIS() {
-        int max = question.findLengthOfLCIS(new int[]{1, 3, 5, 4, 7});
+        int max = question.findLengthOfLCIS(new int[] { 1, 3, 5, 4, 7 });
         Assertions.assertEquals(3, max);
     }
 }

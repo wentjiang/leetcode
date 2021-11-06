@@ -22,20 +22,20 @@ public class Question76 {
         Map<Character, Integer> allMap = new HashMap<>();
 
         while (first < len || second < len) {
-            //当前长度包含字串的情况
+            // 当前长度包含字串的情况
             if (hasAllElement(allMap, subMap)) {
-                //包含字串的字符串长度小于之前的长度
+                // 包含字串的字符串长度小于之前的长度
                 if ((minSecond - minFirst) > (second - first)) {
                     minFirst = first;
                     minSecond = second;
                 }
-                //去掉最前边的字符
-                //前指针向后移动
+                // 去掉最前边的字符
+                // 前指针向后移动
                 changeKeyCount(allMap, subMap, s.charAt(first++), false);
             } else {
-                //没有包含全部的情况
+                // 没有包含全部的情况
                 if (second < len) {
-                    //后指针向后移动
+                    // 后指针向后移动
                     changeKeyCount(allMap, subMap, s.charAt(second++), true);
                 } else {
                     break;
@@ -63,9 +63,11 @@ public class Question76 {
     /**
      * @param allMap
      * @param key
-     * @param increase true 表示增加,false表示减少
+     * @param increase
+     *            true 表示增加,false表示减少
      */
-    public void changeKeyCount(Map<Character, Integer> allMap, Map<Character, Integer> subMap, Character key, boolean increase) {
+    public void changeKeyCount(Map<Character, Integer> allMap, Map<Character, Integer> subMap, Character key,
+            boolean increase) {
         if (subMap.containsKey(key)) {
             if (increase) {
                 allMap.put(key, allMap.getOrDefault(key, 0) + 1);

@@ -7,7 +7,9 @@ import java.util.stream.Stream;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/9/1 9:23 PM
+ * 
  * @description
  */
 public class Question6 {
@@ -38,7 +40,7 @@ public class Question6 {
         }
         StringBuilder stringBuilder = new StringBuilder();
         result.stream().flatMap((Function<List<Character>, Stream<?>>) characters -> characters.stream())
-            .forEach(stringBuilder::append);
+                .forEach(stringBuilder::append);
         return stringBuilder.toString();
     }
 }

@@ -4,7 +4,9 @@ import java.util.Arrays;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/11/15 11:22 AM
+ * 
  * @description
  */
 public class Question56 {
@@ -13,7 +15,7 @@ public class Question56 {
         if (intervals.length <= 1) {
             return intervals;
         }
-        //先进行排序
+        // 先进行排序
         for (int i = 0; i < intervals.length; i++) {
             int minIndex = i;
             int min = Integer.MAX_VALUE;
@@ -29,7 +31,7 @@ public class Question56 {
                 intervals[minIndex] = temp;
             }
         }
-        //排序好进行替换
+        // 排序好进行替换
         int current = 0;
         for (int i = 1; i < intervals.length; i++) {
             if (intervals[current][1] >= intervals[i][0]) {

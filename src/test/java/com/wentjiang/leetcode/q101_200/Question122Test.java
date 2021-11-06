@@ -8,7 +8,9 @@ import static org.junit.Assert.*;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/10/20 12:31 PM
+ * 
  * @description
  */
 public class Question122Test {
@@ -22,17 +24,16 @@ public class Question122Test {
 
     @Test
     public void maxProfit() {
-        Assert.assertEquals(7, question122.maxProfit(new int[]{7, 1, 5, 3, 6, 4}));
+        Assert.assertEquals(7, question122.maxProfit(new int[] { 7, 1, 5, 3, 6, 4 }));
     }
-
 
     @Test
     public void maxProfit1() {
-        Assert.assertEquals(4, question122.maxProfit(new int[]{1, 2, 3, 4, 5}));
+        Assert.assertEquals(4, question122.maxProfit(new int[] { 1, 2, 3, 4, 5 }));
     }
 
     @Test
     public void maxProfit2() {
-        Assert.assertEquals(0, question122.maxProfit(new int[]{7, 6, 4, 3, 1}));
+        Assert.assertEquals(0, question122.maxProfit(new int[] { 7, 6, 4, 3, 1 }));
     }
 }

@@ -2,7 +2,9 @@ package com.wentjiang.leetcode.q101_200;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2020/1/25 5:28 PM
+ * 
  * @description
  */
 public class Question125 {
@@ -23,8 +25,7 @@ public class Question125 {
                 continue;
             }
             if (chars[head] == chars[tail]
-                || isChar(chars[head]) && isChar(chars[tail])
-                && Math.abs(chars[head] - chars[tail]) == 32) {
+                    || isChar(chars[head]) && isChar(chars[tail]) && Math.abs(chars[head] - chars[tail]) == 32) {
                 head++;
                 tail--;
             } else {
@@ -43,7 +44,6 @@ public class Question125 {
     }
 
     public boolean isChar(char ch) {
-        return (ch >= 'a' && ch <= 'z')
-            || (ch >= 'A' && ch <= 'Z');
+        return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z');
     }
 }

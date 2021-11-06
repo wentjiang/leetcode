@@ -7,7 +7,9 @@ import static org.junit.Assert.*;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/9/8 9:51 PM
+ * 
  * @description
  */
 public class Question24Test {
@@ -21,6 +23,7 @@ public class Question24Test {
 
     @Test
     public void swapPairs() {
-        System.out.println(question24.swapPairs(question24.getListNode(new int[]{1, 2, 3, 4})));;
+        System.out.println(question24.swapPairs(question24.getListNode(new int[] { 1, 2, 3, 4 })));
+        ;
     }
 }

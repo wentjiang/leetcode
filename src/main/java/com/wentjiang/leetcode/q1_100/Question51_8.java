@@ -5,7 +5,9 @@ import java.util.List;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019-08-24 22:35
+ * 
  * @description 八皇后问题
  */
 public class Question51_8 {
@@ -33,6 +35,5 @@ public class Question51_8 {
         }
         return result;
     }
-
 
 }

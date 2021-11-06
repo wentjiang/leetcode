@@ -10,18 +10,19 @@ class Question500Test {
 
     @Test
     void findWords() {
-        String[] result = question500.findWords(new String[]{"Hello", "Alaska", "Dad", "Peace"});
-        assertArrayEquals(new String[]{"Alaska","Dad"},result);
+        String[] result = question500.findWords(new String[] { "Hello", "Alaska", "Dad", "Peace" });
+        assertArrayEquals(new String[] { "Alaska", "Dad" }, result);
     }
 
     @Test
     void findWords1() {
-        String[] result = question500.findWords(new String[]{"omk"});
-        assertArrayEquals(new String[]{},result);
+        String[] result = question500.findWords(new String[] { "omk" });
+        assertArrayEquals(new String[] {}, result);
     }
+
     @Test
     void findWords2() {
-        String[] result = question500.findWords(new String[]{"adsdf","sfd"});
-        assertArrayEquals(new String[]{"adsdf","sfd"},result);
+        String[] result = question500.findWords(new String[] { "adsdf", "sfd" });
+        assertArrayEquals(new String[] { "adsdf", "sfd" }, result);
     }
 }

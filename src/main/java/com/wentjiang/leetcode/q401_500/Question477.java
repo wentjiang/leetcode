@@ -29,7 +29,7 @@ public class Question477 {
             for (int num : nums) {
                 count += (num >> i) & 1;
             }
-            sum += count *(nums.length - count);
+            sum += count * (nums.length - count);
         }
         return sum;
     }

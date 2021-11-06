@@ -33,7 +33,7 @@ public class Question500 {
                 index++;
             }
         }
-        return result.toArray(new String[]{});
+        return result.toArray(new String[] {});
     }
 
     public Set<Character> getSet(String line) {

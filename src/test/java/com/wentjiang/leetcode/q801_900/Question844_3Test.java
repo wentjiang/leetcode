@@ -36,5 +36,4 @@ public class Question844_3Test {
         Assertions.assertFalse(question844.backspaceCompare("bxj##tw", "bxj###tw"));
     }
 
-
 }

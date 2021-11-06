@@ -2,7 +2,9 @@ package com.wentjiang.leetcode.utils;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2020/1/27 8:28 AM
+ * 
  * @description 公共使用的treenode
  */
 public class TreeNode {
@@ -18,6 +20,7 @@ public class TreeNode {
      * index + 1 的二进制的倒序为当前元素所放置的位置
      *
      * @param array
+     * 
      * @return
      */
     public static TreeNode createTreeFromArray(Integer[] array) {

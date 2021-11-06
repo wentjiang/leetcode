@@ -9,7 +9,7 @@ public class Question643Test {
 
     @Test
     public void findMaxAverage() {
-        Assertions.assertEquals(12.75, question643.findMaxAverage(new int[]{1, 12, -5, -6, 50, 3}, 4));
+        Assertions.assertEquals(12.75, question643.findMaxAverage(new int[] { 1, 12, -5, -6, 50, 3 }, 4));
     }
 
 }

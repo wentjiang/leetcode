@@ -8,7 +8,9 @@ import static org.junit.Assert.*;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/9/10 3:04 PM
+ * 
  * @description
  */
 public class Question27Test {
@@ -22,12 +24,12 @@ public class Question27Test {
 
     @Test
     public void removeElement() {
-        Assert.assertEquals(2, question27.removeElement(new int[]{3, 2, 2, 3}, 3));
+        Assert.assertEquals(2, question27.removeElement(new int[] { 3, 2, 2, 3 }, 3));
     }
 
     @Test
     public void removeElement1() {
-        Assert.assertEquals(5, question27.removeElement(new int[]{0,1,2,2,3,0,4,2}, 2));
+        Assert.assertEquals(5, question27.removeElement(new int[] { 0, 1, 2, 2, 3, 0, 4, 2 }, 2));
     }
 
 }

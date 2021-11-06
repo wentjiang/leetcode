@@ -18,9 +18,7 @@ public class Question1190Test {
     }
 
     static Stream<Arguments> resultAndParam() {
-        return Stream.of(
-                Arguments.arguments("dcba", "(abcd)"),
-                Arguments.arguments("iloveu", "(u(love)i)"),
+        return Stream.of(Arguments.arguments("dcba", "(abcd)"), Arguments.arguments("iloveu", "(u(love)i)"),
                 Arguments.arguments("leetcode", "(ed(et(oc))el)"),
                 Arguments.arguments("apmnolkjihgfedcbq", "a(bcdefghijkl(mno)p)q"));
     }

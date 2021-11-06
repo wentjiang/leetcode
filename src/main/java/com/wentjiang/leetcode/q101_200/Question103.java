@@ -5,7 +5,9 @@ import java.util.List;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/10/3 2:53 PM
+ * 
  * @description
  */
 public class Question103 {
@@ -27,13 +29,13 @@ public class Question103 {
         viewTree(root, 0);
         List<List<Integer>> newResult = new ArrayList<>();
         boolean reversal = false;
-        for (int i = 0;i<result.size();i++) {
+        for (int i = 0; i < result.size(); i++) {
             List<Integer> list = result.get(i);
             if (reversal) {
                 List<Integer> temp = new ArrayList<>();
                 for (int j = list.size() - 1; j >= 0; j--) {
                     temp.add(list.get(j));
-                    result.set(i,temp);
+                    result.set(i, temp);
                 }
                 reversal = false;
             } else {

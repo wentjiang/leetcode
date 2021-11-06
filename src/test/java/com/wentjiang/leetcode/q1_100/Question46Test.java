@@ -7,7 +7,9 @@ import static org.junit.Assert.*;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/9/18 8:51 PM
+ * 
  * @description
  */
 public class Question46Test {
@@ -21,7 +23,7 @@ public class Question46Test {
 
     @Test
     public void permute() {
-        System.out.println(question46.permute(new int[]{1, 2, 3}));
+        System.out.println(question46.permute(new int[] { 1, 2, 3 }));
     }
 
 }

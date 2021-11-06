@@ -9,22 +9,22 @@ class Question456Test {
 
     @Test
     void find132pattern() {
-        Assertions.assertFalse(question456.find132pattern(new int[]{1, 2, 3, 4}));
+        Assertions.assertFalse(question456.find132pattern(new int[] { 1, 2, 3, 4 }));
     }
 
     @Test
     void find132pattern1() {
-        Assertions.assertTrue(question456.find132pattern(new int[]{3, 1, 4, 2}));
+        Assertions.assertTrue(question456.find132pattern(new int[] { 3, 1, 4, 2 }));
     }
 
     @Test
     void find132pattern2() {
-        Assertions.assertFalse(question456.find132pattern(new int[]{-2, 1, -2}));
+        Assertions.assertFalse(question456.find132pattern(new int[] { -2, 1, -2 }));
     }
 
     @Test
     void find132pattern3() {
-        Assertions.assertTrue(question456.find132pattern(new int[]{3, 5, 0, 3, 4}));
+        Assertions.assertTrue(question456.find132pattern(new int[] { 3, 5, 0, 3, 4 }));
     }
 
 }

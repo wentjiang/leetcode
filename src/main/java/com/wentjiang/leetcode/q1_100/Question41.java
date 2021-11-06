@@ -5,13 +5,15 @@ import java.util.Set;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2020/2/2 9:29 PM
+ * 
  * @description
  */
 public class Question41 {
     /**
-     * put all num into set,loop form 1 to the max,the first num that not in set is the result
-     * time complexity is o(n) but
+     * put all num into set,loop form 1 to the max,the first num that not in set is the result time complexity is o(n)
+     * but
      */
     public int firstMissingPositive1(int[] nums) {
         Set<Integer> set = new HashSet<>();
@@ -32,7 +34,7 @@ public class Question41 {
             int value = nums[index];
             if (nums[index] != index + 1) {
                 if (value > 0 && value <= nums.length && nums[value - 1] != value) {
-                    //swap num
+                    // swap num
                     int temp = nums[value - 1];
                     nums[value - 1] = value;
                     nums[index] = temp;

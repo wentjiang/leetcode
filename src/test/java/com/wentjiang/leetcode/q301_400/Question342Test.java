@@ -16,14 +16,11 @@ public class Question342Test {
 
     @ParameterizedTest
     @MethodSource("resultAndParam")
-    public void isPowerOfFour(boolean result,int param) {
-        Assertions.assertEquals(result,question342.isPowerOfFour(param));
+    public void isPowerOfFour(boolean result, int param) {
+        Assertions.assertEquals(result, question342.isPowerOfFour(param));
     }
 
     static Stream<Arguments> resultAndParam() {
-        return Stream.of(
-                Arguments.arguments(true, 16),
-                Arguments.arguments(false, 5),
-                Arguments.arguments(true, 1));
+        return Stream.of(Arguments.arguments(true, 16), Arguments.arguments(false, 5), Arguments.arguments(true, 1));
     }
 }

@@ -2,7 +2,9 @@ package com.wentjiang.leetcode.q1_100;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/9/4 11:02 AM
+ * 
  * @description
  */
 public class Question5_2 {
@@ -15,11 +17,11 @@ public class Question5_2 {
             result = s.substring(0, 1);
         }
         for (int i = 0; i + result.length() / 2 < s.length(); i++) {
-            //右边是否可扩展
+            // 右边是否可扩展
             boolean extendRigth = true;
-            //左边是否可扩展
+            // 左边是否可扩展
             boolean extendLeft = true;
-            //先扩展右边
+            // 先扩展右边
             boolean currentRight = true;
             boolean nowRight = true;
             int start = i;

@@ -9,7 +9,7 @@ public class TreeNodeTest {
 
     @Test
     public void createTreeFromArray() {
-        TreeNode root = TreeNode.createTreeFromArray(new Integer[]{0, 1, 2});
+        TreeNode root = TreeNode.createTreeFromArray(new Integer[] { 0, 1, 2 });
         Assertions.assertEquals("[0,1,null,null,2,null,null]", root.toString());
     }
 

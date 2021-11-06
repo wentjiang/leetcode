@@ -8,7 +8,9 @@ import static org.junit.Assert.*;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/9/18 9:13 PM
+ * 
  * @description
  */
 public class Question58Test {
@@ -22,6 +24,6 @@ public class Question58Test {
 
     @Test
     public void lengthOfLastWord() {
-        Assert.assertEquals(5,question58.lengthOfLastWord("Hello World"));
+        Assert.assertEquals(5, question58.lengthOfLastWord("Hello World"));
     }
 }

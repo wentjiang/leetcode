@@ -4,7 +4,9 @@ import java.util.LinkedList;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2020/3/4 9:34 下午
+ * 
  * @description
  */
 public class Question57 {
@@ -12,7 +14,7 @@ public class Question57 {
         int newStart = newInterval[0], newEnd = newInterval[1];
         int idx = 0, n = intervals.length;
         LinkedList<int[]> output = new LinkedList<>();
-        //如果第一位大的都加载新加入元素的前边
+        // 如果第一位大的都加载新加入元素的前边
         while (idx < n && newStart > intervals[idx][0]) {
             output.add(intervals[idx++]);
         }

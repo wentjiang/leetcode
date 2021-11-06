@@ -7,7 +7,9 @@ import java.util.List;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/10/13 6:54 PM
+ * 
  * @description
  */
 public class Question118 {
@@ -21,7 +23,7 @@ public class Question118 {
         }
         for (int i = 2; i < numRows; i++) {
             List<Integer> preList = result.get(i - 1);
-            List<Integer> temp = new ArrayList<>(preList.size()+1);
+            List<Integer> temp = new ArrayList<>(preList.size() + 1);
             temp.add(1);
             for (int j = 0; j < preList.size() - 1; j++) {
                 temp.add(preList.get(j) + preList.get(j + 1));

@@ -12,19 +12,19 @@ public class Question671Test {
 
     @Test
     public void findSecondMinimumValue() {
-        TreeNode root = TreeNode.createTreeFromArray(new Integer[]{2, 2, 5, null, null, 5, 7});
+        TreeNode root = TreeNode.createTreeFromArray(new Integer[] { 2, 2, 5, null, null, 5, 7 });
         Assertions.assertEquals(5, question671.findSecondMinimumValue(root));
     }
 
     @Test
     public void findSecondMinimumValue1() {
-        TreeNode root = TreeNode.createTreeFromArray(new Integer[]{2, 2, 2});
+        TreeNode root = TreeNode.createTreeFromArray(new Integer[] { 2, 2, 2 });
         Assertions.assertEquals(-1, question671.findSecondMinimumValue(root));
     }
 
     @Test
     public void findSecondMinimumValue2() {
-        TreeNode root = TreeNode.createTreeFromArray(new Integer[]{2, 2, 2147483647});
+        TreeNode root = TreeNode.createTreeFromArray(new Integer[] { 2, 2, 2147483647 });
         Assertions.assertEquals(2147483647, question671.findSecondMinimumValue(root));
     }
 }

@@ -4,7 +4,9 @@ import java.util.Arrays;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/10/12 1:56 PM
+ * 
  * @description
  */
 public class Question105 {
@@ -33,15 +35,14 @@ public class Question105 {
                 break;
             }
         }
-        //构建左子树
+        // 构建左子树
         if (index >= 1) {
-            root.left = buildTree(Arrays.copyOfRange(preorder, 1, index + 1)
-                , Arrays.copyOfRange(inorder, 0, index));
+            root.left = buildTree(Arrays.copyOfRange(preorder, 1, index + 1), Arrays.copyOfRange(inorder, 0, index));
         }
-        //构建右子树
+        // 构建右子树
         if (index <= length - 1) {
-            root.right = buildTree(Arrays.copyOfRange(preorder, index + 1, length)
-                , Arrays.copyOfRange(inorder, index + 1, length));
+            root.right = buildTree(Arrays.copyOfRange(preorder, index + 1, length),
+                    Arrays.copyOfRange(inorder, index + 1, length));
         }
         return root;
     }

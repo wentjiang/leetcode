@@ -4,7 +4,9 @@ import java.util.Stack;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/9/2 1:49 PM
+ * 
  * @description
  */
 public class Question20 {
@@ -18,20 +20,17 @@ public class Question20 {
         Stack<Character> stack = new Stack<>();
         char[] chars = s.toCharArray();
         for (char ch : chars) {
-            if ("(".equals(String.valueOf(ch))
-                || "[".equals(String.valueOf(ch))
-                || "{".equals(String.valueOf(ch))) {
+            if ("(".equals(String.valueOf(ch)) || "[".equals(String.valueOf(ch)) || "{".equals(String.valueOf(ch))) {
                 stack.push(ch);
-            } else if (")".equals(String.valueOf(ch))
-                || "]".equals(String.valueOf(ch))
-                || "}".equals(String.valueOf(ch))) {
+            } else if (")".equals(String.valueOf(ch)) || "]".equals(String.valueOf(ch))
+                    || "}".equals(String.valueOf(ch))) {
                 if (stack.isEmpty()) {
                     return false;
                 }
                 char popChar = stack.pop();
                 boolean match = ("(".equals(String.valueOf(popChar)) && ")".equals(String.valueOf(ch)))
-                    || (("[".equals(String.valueOf(popChar)) && "]".equals(String.valueOf(ch))))
-                    || (("{".equals(String.valueOf(popChar)) && "}".equals(String.valueOf(ch))));
+                        || (("[".equals(String.valueOf(popChar)) && "]".equals(String.valueOf(ch))))
+                        || (("{".equals(String.valueOf(popChar)) && "}".equals(String.valueOf(ch))));
                 if (!match) {
                     return false;
                 }

@@ -10,7 +10,7 @@ public class InterView_17_10 {
             }
             if (tempNum == num) {
                 count++;
-            }else{
+            } else {
                 count--;
             }
         }

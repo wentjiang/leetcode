@@ -7,7 +7,9 @@ import java.util.List;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2020/1/27 8:27 AM
+ * 
  * @description 递归法后序遍历
  */
 public class Question145 {
@@ -20,11 +22,11 @@ public class Question145 {
     }
 
     public void viewTree(TreeNode current, List<Integer> result) {
-        if (current.left != null){
-            viewTree(current.left,result);
+        if (current.left != null) {
+            viewTree(current.left, result);
         }
         if (current.right != null) {
-            viewTree(current.right,result);
+            viewTree(current.right, result);
         }
         result.add(current.val);
     }

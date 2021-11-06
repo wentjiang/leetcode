@@ -11,7 +11,7 @@ public class Question477Test {
 
     @Test
     public void totalHammingDistance() {
-        Assertions.assertEquals(6, question477.totalHammingDistance(new int[]{4, 14, 2}));
-        Assertions.assertEquals(6, question477.totalHammingDistance1(new int[]{4, 14, 2}));
+        Assertions.assertEquals(6, question477.totalHammingDistance(new int[] { 4, 14, 2 }));
+        Assertions.assertEquals(6, question477.totalHammingDistance1(new int[] { 4, 14, 2 }));
     }
 }

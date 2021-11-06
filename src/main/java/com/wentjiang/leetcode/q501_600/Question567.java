@@ -6,9 +6,9 @@ import java.util.Map;
 public class Question567 {
     public boolean checkInclusion(String s1, String s2) {
         int len = s1.length();
-        //当前缓存的map
+        // 当前缓存的map
         Map<Character, Integer> subMap = new HashMap<>();
-        //目标map
+        // 目标map
         Map<Character, Integer> targetMap = new HashMap<>();
         for (int i = 0; i < s1.length(); i++) {
             int value = targetMap.getOrDefault(s1.charAt(i), 0);
@@ -17,7 +17,7 @@ public class Question567 {
         int index = 0;
         int count = 0;
         while (index < s2.length()) {
-            //判断有没有包含全部
+            // 判断有没有包含全部
             char currentCh = s2.charAt(index);
             if (!targetMap.containsKey(currentCh)) {
                 index++;
@@ -29,13 +29,13 @@ public class Question567 {
                 int value = subMap.getOrDefault(currentCh, 0);
                 subMap.put(currentCh, ++value);
             }
-            //如果长度相等,判断是否全包含,不全包含向后移动
+            // 如果长度相等,判断是否全包含,不全包含向后移动
             if (count == len) {
-                //包含全部,返回true
+                // 包含全部,返回true
                 if (containsAll(subMap, targetMap)) {
                     return true;
                 } else {
-                    //去掉第一位的字符
+                    // 去掉第一位的字符
                     count--;
                     char ch = s2.charAt(index - len);
                     int value = subMap.get(ch);

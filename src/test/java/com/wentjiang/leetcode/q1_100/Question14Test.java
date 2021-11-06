@@ -8,7 +8,9 @@ import static org.junit.Assert.*;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/8/27 7:08 PM
+ * 
  * @description
  */
 public class Question14Test {
@@ -22,26 +24,26 @@ public class Question14Test {
 
     @Test
     public void longestCommonPrefix1() {
-        Assert.assertEquals("fl", question14.longestCommonPrefix(new String[]{"flower", "flow", "flight"}));
+        Assert.assertEquals("fl", question14.longestCommonPrefix(new String[] { "flower", "flow", "flight" }));
     }
 
     @Test
     public void longestCommonPrefix2() {
-        Assert.assertEquals("", question14.longestCommonPrefix(new String[]{"dog", "racecar", "car"}));
+        Assert.assertEquals("", question14.longestCommonPrefix(new String[] { "dog", "racecar", "car" }));
     }
 
     @Test
     public void longestCommonPrefix3() {
-        Assert.assertEquals("", question14.longestCommonPrefix(new String[]{}));
+        Assert.assertEquals("", question14.longestCommonPrefix(new String[] {}));
     }
 
     @Test
     public void longestCommonPrefix4() {
-        Assert.assertEquals("a", question14.longestCommonPrefix(new String[]{"a"}));
+        Assert.assertEquals("a", question14.longestCommonPrefix(new String[] { "a" }));
     }
 
     @Test
     public void longestCommonPrefix5() {
-        Assert.assertEquals("c", question14.longestCommonPrefix(new String[]{"c", "c"}));
+        Assert.assertEquals("c", question14.longestCommonPrefix(new String[] { "c", "c" }));
     }
 }

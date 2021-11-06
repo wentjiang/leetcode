@@ -4,7 +4,9 @@ import java.util.*;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/9/8 10:44 AM
+ * 
  * @description
  */
 public class Question18_2 {
@@ -24,7 +26,7 @@ public class Question18_2 {
             for (int j = i + 1; j < list.size(); i++) {
                 int sum = list.get(i).stream().mapToInt(t -> t).sum();
                 sum += list.get(j).stream().mapToInt(t -> t).sum();
-                if (sum == target){
+                if (sum == target) {
 
                 }
             }

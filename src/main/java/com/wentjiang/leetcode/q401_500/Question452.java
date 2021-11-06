@@ -7,11 +7,12 @@ public class Question452 {
      * 贪心法
      *
      * @param points
+     * 
      * @return
      */
     public int findMinArrowShots1(int[][] points) {
         int max = Integer.MIN_VALUE, min = Integer.MAX_VALUE;
-        //find max and min
+        // find max and min
         for (int[] point : points) {
             min = Math.min(min, point[0]);
             max = Math.max(max, point[1]);
@@ -21,12 +22,12 @@ public class Question452 {
         int maxIndex = 0;
         Set<Integer> finishedSet = new HashSet<>();
         Set<Integer> usedIndexSet = new HashSet<>();
-        //每次找到一个去除最多的,最多次数为数组长度
+        // 每次找到一个去除最多的,最多次数为数组长度
         for (int loop = 0; loop < points.length; loop++) {
             if (finishedSet.size() == points.length) {
                 break;
             }
-            //找到每个位置去除的数目
+            // 找到每个位置去除的数目
             for (int i = min; i <= max; i++) {
                 if (usedIndexSet.contains(i)) {
                     continue;
@@ -42,7 +43,7 @@ public class Question452 {
                     maxIndex = i;
                 }
             }
-            //记录当前索引去除的数组索引
+            // 记录当前索引去除的数组索引
             for (int i = 0; i < points.length; i++) {
                 if (points[i][0] <= maxIndex && maxIndex <= points[i][1]) {
                     finishedSet.add(i);
@@ -54,7 +55,6 @@ public class Question452 {
         }
         return num;
     }
-
 
     /**
      * 先按照起始点进行排序,排序之后使用动态规划方法,找到最小的气球的最大数量,选择该点射击

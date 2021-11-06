@@ -4,15 +4,19 @@ import com.wentjiang.leetcode.utils.ListNode;
 
 /**
  * @author wentaojiang
+ * 
  * @date 2019/9/2 7:47 PM
+ * 
  * @description
  */
 public class Question19 {
 
     /**
      * 需要引入岗哨节点,不然出现一堆堆难解决的问题
+     * 
      * @param head
      * @param n
+     * 
      * @return
      */
     public ListNode removeNthFromEnd(ListNode head, int n) {

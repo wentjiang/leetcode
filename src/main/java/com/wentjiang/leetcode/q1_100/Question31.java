@@ -2,7 +2,9 @@ package com.wentjiang.leetcode.q1_100;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2019/11/14 8:52 PM
+ * 
  * @description
  */
 public class Question31 {
@@ -34,6 +36,5 @@ public class Question31 {
         nums[index1] = nums[index2];
         nums[index2] = temp;
     }
-
 
 }

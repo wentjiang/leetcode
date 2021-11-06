@@ -2,7 +2,9 @@ package com.wentjiang.leetcode.q101_200;
 
 /**
  * @author wentao.jiang
+ * 
  * @date 2020/1/18 10:56 AM
+ * 
  * @description
  */
 public class Question124 {
@@ -34,7 +36,7 @@ public class Question124 {
 
         int current = root.val + leftMax + rightMax;
         max = Math.max(max, current);
-        return root.val + Math.max(leftMax , rightMax);
+        return root.val + Math.max(leftMax, rightMax);
     }
 
 }
