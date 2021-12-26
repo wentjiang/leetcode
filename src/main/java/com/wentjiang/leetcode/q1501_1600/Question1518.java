@@ -6,7 +6,7 @@ public class Question1518 {
         int leftBottles = 0;
         while ((numBottles + leftBottles) >= numExchange) {
             sum += (numBottles + leftBottles) / numExchange;
-            int newLeftBottles = (numBottles + leftBottles)% numExchange;
+            int newLeftBottles = (numBottles + leftBottles) % numExchange;
             numBottles = (numBottles + leftBottles) / numExchange;
             leftBottles = newLeftBottles;
         }

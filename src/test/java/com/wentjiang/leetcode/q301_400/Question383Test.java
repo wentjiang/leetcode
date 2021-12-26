@@ -11,17 +11,17 @@ class Question383Test {
 
     @Test
     void canConstruct1() {
-        Assertions.assertFalse(question383.canConstruct("a","b"));
+        Assertions.assertFalse(question383.canConstruct("a", "b"));
     }
 
     @Test
     void canConstruct2() {
-        Assertions.assertFalse(question383.canConstruct("aa","ab"));
+        Assertions.assertFalse(question383.canConstruct("aa", "ab"));
     }
 
     @Test
     void canConstruct3() {
-        Assertions.assertTrue(question383.canConstruct("aa","aab"));
+        Assertions.assertTrue(question383.canConstruct("aa", "aab"));
     }
 
 }

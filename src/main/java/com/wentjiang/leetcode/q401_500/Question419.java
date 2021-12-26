@@ -8,8 +8,8 @@ public class Question419 {
 
         for (int i = 0; i < lineNum; i++) {
             for (int j = 0; j < colNum; j++) {
-                if (board[i][j]=='X'){
-                    board[i][j]='.';
+                if (board[i][j] == 'X') {
+                    board[i][j] = '.';
                     for (int k = j + 1; k < colNum && board[i][k] == 'X'; ++k) {
                         board[i][k] = '.';
                     }
