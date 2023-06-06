@@ -8,7 +8,8 @@ public class Question819Test {
 
     @Test
     public void test1() {
-        Assertions.assertEquals("ball", question819.mostCommonWord("Bob hit a ball, the hit BALL flew far after it was hit.", new String[]{"hit"}));
+        Assertions.assertEquals("ball", question819
+                .mostCommonWord("Bob hit a ball, the hit BALL flew far after it was hit.", new String[] { "hit" }));
     }
 
 }

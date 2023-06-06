@@ -29,13 +29,13 @@ public class Day1Question2 {
                 }
                 secondIndex++;
             } else {
-                //清理无用的字符
+                // 清理无用的字符
                 char temp = chars[firstIndex];
                 while (firstIndex < secondIndex) {
                     if (temp == ch) {
                         firstIndex++;
                         break;
-                    }else{
+                    } else {
                         charSet.remove(temp);
                         firstIndex++;
                     }

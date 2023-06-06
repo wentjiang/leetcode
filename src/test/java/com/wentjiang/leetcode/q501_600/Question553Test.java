@@ -11,21 +11,21 @@ class Question553Test {
 
     @Test
     void optimalDivision1() {
-        Assertions.assertEquals("1", question553.optimalDivision(new int[]{1}));
+        Assertions.assertEquals("1", question553.optimalDivision(new int[] { 1 }));
     }
 
     @Test
     void optimalDivision2() {
-        Assertions.assertEquals("10/2", question553.optimalDivision(new int[]{10,2}));
+        Assertions.assertEquals("10/2", question553.optimalDivision(new int[] { 10, 2 }));
     }
 
     @Test
     void optimalDivision3() {
-        Assertions.assertEquals("100/(10/2)", question553.optimalDivision(new int[]{100,10,2}));
+        Assertions.assertEquals("100/(10/2)", question553.optimalDivision(new int[] { 100, 10, 2 }));
     }
 
     @Test
     void optimalDivision() {
-        Assertions.assertEquals("1000/(100/10/2)", question553.optimalDivision(new int[]{1000, 100, 10, 2}));
+        Assertions.assertEquals("1000/(100/10/2)", question553.optimalDivision(new int[] { 1000, 100, 10, 2 }));
     }
 }

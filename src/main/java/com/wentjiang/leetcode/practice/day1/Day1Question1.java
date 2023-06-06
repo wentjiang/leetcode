@@ -1,6 +1,5 @@
 package com.wentjiang.leetcode.practice.day1;
 
-
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -36,9 +35,7 @@ public class Day1Question1 {
             }
             if (rightBrackets.contains(ch)) {
                 char last = stack.get(stack.size() - 1);
-                if ((last == '(' && ch != ')') ||
-                        last == '[' && ch != ']' ||
-                        last == '{' && ch != '}') {
+                if ((last == '(' && ch != ')') || last == '[' && ch != ']' || last == '{' && ch != '}') {
                     return false;
                 } else {
                     stack.remove(stack.size() - 1);

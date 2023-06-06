@@ -7,10 +7,10 @@ public class Question1020 {
         int colLenght = grid[0].length;
         for (int i = 0; i < rowlength; i++) {
             for (int j = 0; j < colLenght; j++) {
-                //边沿情况
+                // 边沿情况
                 if (grid[i][j] == 1 && isEdge(i, j, rowlength, colLenght)) {
                     grid[i][j] = 2;
-                    //延伸到周围的进行判断
+                    // 延伸到周围的进行判断
                     effectAround(grid, i, j);
                 }
             }
@@ -26,22 +26,22 @@ public class Question1020 {
     }
 
     private void effectAround(int[][] grid, int i, int j) {
-        //左
+        // 左
         if (j > 0 && grid[i][j - 1] == 1) {
             grid[i][j - 1] = 2;
             effectAround(grid, i, j - 1);
         }
-        //右
+        // 右
         if (j < grid[0].length - 1 && grid[i][j + 1] == 1) {
             grid[i][j + 1] = 2;
             effectAround(grid, i, j + 1);
         }
-        //上
+        // 上
         if (i > 0 && grid[i - 1][j] == 1) {
             grid[i - 1][j] = 2;
             effectAround(grid, i - 1, j);
         }
-        //下
+        // 下
         if (i < grid.length - 1 && grid[i + 1][j] == 1) {
             grid[i + 1][j] = 2;
             effectAround(grid, i + 1, j);

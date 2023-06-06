@@ -11,16 +11,18 @@ class Question1020Test {
 
     @Test
     void numEnclaves() {
-        Assertions.assertEquals(3,question1020.numEnclaves(new int[][]{{0,0,0,0}, {1,0,1,0}, {0,1,1,0},{0,0,0,0}}));
+        Assertions.assertEquals(3, question1020
+                .numEnclaves(new int[][] { { 0, 0, 0, 0 }, { 1, 0, 1, 0 }, { 0, 1, 1, 0 }, { 0, 0, 0, 0 } }));
     }
 
     @Test
     void numEnclaves1() {
-        Assertions.assertEquals(0,question1020.numEnclaves(new int[][]{{0,1,1,0},{0,0,1,0},{0,0,1,0},{0,0,0,0}}));
+        Assertions.assertEquals(0, question1020
+                .numEnclaves(new int[][] { { 0, 1, 1, 0 }, { 0, 0, 1, 0 }, { 0, 0, 1, 0 }, { 0, 0, 0, 0 } }));
     }
 
     @Test
     void numEnclaves2() {
-        Assertions.assertEquals(0,question1020.numEnclaves(new int[][]{{0},{1},{1},{0},{0}}));
+        Assertions.assertEquals(0, question1020.numEnclaves(new int[][] { { 0 }, { 1 }, { 1 }, { 0 }, { 0 } }));
     }
 }

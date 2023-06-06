@@ -9,9 +9,7 @@ public class Question553 {
             return nums[0] + "/" + nums[1];
         }
         StringBuilder sb = new StringBuilder();
-        sb.append(nums[0])
-                .append("/")
-                .append("(");
+        sb.append(nums[0]).append("/").append("(");
         for (int i = 1; i < nums.length - 1; i++) {
             sb.append(nums[i]).append("/");
         }

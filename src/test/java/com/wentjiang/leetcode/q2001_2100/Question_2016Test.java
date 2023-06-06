@@ -11,16 +11,16 @@ class Question_2016Test {
 
     @Test
     void maximumDifference() {
-        Assertions.assertEquals(4, question2016.maximumDifference(new int[]{7,1,5,4}));
+        Assertions.assertEquals(4, question2016.maximumDifference(new int[] { 7, 1, 5, 4 }));
     }
 
     @Test
     void maximumDifference2() {
-        Assertions.assertEquals(-1, question2016.maximumDifference(new int[]{9,4,3,2}));
+        Assertions.assertEquals(-1, question2016.maximumDifference(new int[] { 9, 4, 3, 2 }));
     }
 
     @Test
     void maximumDifference3() {
-        Assertions.assertEquals(9, question2016.maximumDifference(new int[]{1,5,2,10}));
+        Assertions.assertEquals(9, question2016.maximumDifference(new int[] { 1, 5, 2, 10 }));
     }
 }

@@ -22,10 +22,10 @@ public class Question393 {
         int index = 0;
         while (true) {
             String str = list.get(index);
-            //0开头,只有一个字节
+            // 0开头,只有一个字节
             if (list.get(index).startsWith("0")) {
                 index++;
-                //1开头,有多个字节
+                // 1开头,有多个字节
             } else if (list.get(index).startsWith("10")) {
                 return false;
             } else {

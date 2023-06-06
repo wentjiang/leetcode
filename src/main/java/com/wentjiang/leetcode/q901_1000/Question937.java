@@ -28,6 +28,6 @@ public class Question937 {
             }
         });
         stringLogs.addAll(numberLogs);
-        return stringLogs.toArray(new String[]{});
+        return stringLogs.toArray(new String[] {});
     }
 }

@@ -3,7 +3,7 @@ package com.wentjiang.leetcode.practice.day1;
 //最短路径和
 public class Day1Question3 {
 
-    //用一张额外的二维数组表记录当前节点的最短距离
+    // 用一张额外的二维数组表记录当前节点的最短距离
     public int getShortestPath(int[][] grid) {
         int result = 0;
         int rowNum = grid.length;

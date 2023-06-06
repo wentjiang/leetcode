@@ -9,19 +9,19 @@ class Day1Question3Test {
 
     @Test
     public void case1() {
-        int result = day1Question3.getShortestPath(new int[][]{{1, 3, 1}, {1, 5, 1}, {4, 2, 1}});
+        int result = day1Question3.getShortestPath(new int[][] { { 1, 3, 1 }, { 1, 5, 1 }, { 4, 2, 1 } });
         Assertions.assertEquals(7, result);
     }
 
     @Test
     public void case2() {
-        int result = day1Question3.getShortestPath(new int[][]{{1, 2, 3}, {4, 5, 6}});
+        int result = day1Question3.getShortestPath(new int[][] { { 1, 2, 3 }, { 4, 5, 6 } });
         Assertions.assertEquals(12, result);
     }
 
     @Test
     public void case3() {
-        int result = day1Question3.getShortestPath(new int[][]{{1}});
+        int result = day1Question3.getShortestPath(new int[][] { { 1 } });
         Assertions.assertEquals(1, result);
     }
 

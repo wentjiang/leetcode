@@ -11,21 +11,21 @@ class Question393Test {
 
     @Test
     void validUtf8() {
-        Assertions.assertTrue(question393.validUtf8(new int[]{197,130,1}));
+        Assertions.assertTrue(question393.validUtf8(new int[] { 197, 130, 1 }));
     }
 
     @Test
     void validUtf8_1() {
-        Assertions.assertFalse(question393.validUtf8(new int[]{235,140,4}));
+        Assertions.assertFalse(question393.validUtf8(new int[] { 235, 140, 4 }));
     }
 
     @Test
     void validUtf8_2() {
-        Assertions.assertFalse(question393.validUtf8(new int[]{237}));
+        Assertions.assertFalse(question393.validUtf8(new int[] { 237 }));
     }
 
     @Test
     void validUtf8_3() {
-        Assertions.assertFalse(question393.validUtf8(new int[]{145}));
+        Assertions.assertFalse(question393.validUtf8(new int[] { 145 }));
     }
 }

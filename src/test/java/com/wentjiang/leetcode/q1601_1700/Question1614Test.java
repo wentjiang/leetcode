@@ -11,21 +11,21 @@ class Question1614Test {
 
     @Test
     void maxDepth() {
-        Assertions.assertEquals(3,question1614.maxDepth("(1+(2*3)+((8)/4))+1"));
+        Assertions.assertEquals(3, question1614.maxDepth("(1+(2*3)+((8)/4))+1"));
     }
 
     @Test
     void maxDepth1() {
-        Assertions.assertEquals(3,question1614.maxDepth("(1)+((2))+(((3)))"));
+        Assertions.assertEquals(3, question1614.maxDepth("(1)+((2))+(((3)))"));
     }
 
     @Test
     void maxDepth2() {
-        Assertions.assertEquals(1,question1614.maxDepth("1+(2*3)/(2-1)"));
+        Assertions.assertEquals(1, question1614.maxDepth("1+(2*3)/(2-1)"));
     }
 
     @Test
     void maxDepth3() {
-        Assertions.assertEquals(0,question1614.maxDepth("1"));
+        Assertions.assertEquals(0, question1614.maxDepth("1"));
     }
 }

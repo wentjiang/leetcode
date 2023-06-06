@@ -11,21 +11,21 @@ class Question1763Test {
 
     @Test
     void longestNiceSubstring() {
-        Assertions.assertEquals("aAa",question1763.longestNiceSubstring("YazaAay"));
+        Assertions.assertEquals("aAa", question1763.longestNiceSubstring("YazaAay"));
     }
 
     @Test
     void longestNiceSubstring1() {
-        Assertions.assertEquals("Bb",question1763.longestNiceSubstring("Bb"));
+        Assertions.assertEquals("Bb", question1763.longestNiceSubstring("Bb"));
     }
 
     @Test
     void longestNiceSubstring2() {
-        Assertions.assertEquals("",question1763.longestNiceSubstring("c"));
+        Assertions.assertEquals("", question1763.longestNiceSubstring("c"));
     }
 
     @Test
     void longestNiceSubstring3() {
-        Assertions.assertEquals("dD",question1763.longestNiceSubstring("dDzeE"));
+        Assertions.assertEquals("dD", question1763.longestNiceSubstring("dDzeE"));
     }
 }
