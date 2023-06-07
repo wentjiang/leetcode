@@ -74,25 +74,25 @@ class Day1Question2_2Test {
     }
 
     @Test
-    public void case12(){
+    public void case12() {
         int result = day1Question2.longestSubString("qrsvbspk");
         Assertions.assertEquals(5, result);
     }
 
     @Test
-    public void case13(){
+    public void case13() {
         int result = day1Question2.longestSubString("abcdecfg");
         Assertions.assertEquals(5, result);
     }
 
     @Test
-    public void case14(){
+    public void case14() {
         int result = day1Question2.longestSubString("tmmzuxt");
         Assertions.assertEquals(5, result);
     }
 
     @Test
-    public void case15(){
+    public void case15() {
         int result = day1Question2.longestSubString("bcbcd");
         Assertions.assertEquals(3, result);
     }

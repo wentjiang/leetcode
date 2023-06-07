@@ -19,7 +19,7 @@ public class Day1Question2_2 {
         int result = 0;
         Set<Character> charSet = new HashSet<>();
         char[] chars = originalString.toCharArray();
-        for (int i = 0;i< chars.length;i++) {
+        for (int i = 0; i < chars.length; i++) {
             if (!charSet.contains(chars[i])) {
                 charSet.add(chars[i]);
                 if (result < charSet.size()) {

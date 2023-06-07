@@ -50,7 +50,7 @@ public class Day1Question1_2Test {
     }
 
     @Test
-    public void case8(){
+    public void case8() {
         boolean result = day1Question1.bracketMatch("((");
         Assertions.assertFalse(result);
     }
