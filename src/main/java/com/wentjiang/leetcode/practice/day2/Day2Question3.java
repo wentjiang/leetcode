@@ -6,131 +6,145 @@ import java.util.List;
 
 public class Day2Question3 {
 
-
-    public int maxWidth(Integer[] treeArray) {
-
-        List<ExtendTreeNode> extendTreeNodes = new ArrayList<>();
-        int maxRealDepth = 0;
-
-        TreeNode root = createTreeFromArray(treeArray);
-        ExtendTreeNode extendTreeNodeRoot = new ExtendTreeNode(root, true, 1);
-        extendTreeNodes.add(extendTreeNodeRoot);
-
-        Iterator<ExtendTreeNode> iterator = extendTreeNodes.iterator();
-        while (iterator.hasNext()) {
-            ExtendTreeNode next = iterator.next();
-            //如果上一层没有真实的节点,不用继续向下扩展
-            if (next.depth > maxRealDepth + 1) {
-                break;
-            }
-            //如果当前节点是真实节点
-            if (next.isRealNode) {
-                //更新最大真实的深度
-                maxRealDepth = Math.max(next.depth, maxRealDepth);
-                TreeNode leftTreeNode = next.node.left;
-                TreeNode rightTreeNode = next.node.right;
-                //左节点不为空的情况
-                if (leftTreeNode != null) {
-                    extendTreeNodes.add(new ExtendTreeNode(leftTreeNode, true, next.depth + 1));
-                } else {
-                    //为空使用空节点站位方便后边计算
-                    extendTreeNodes.add(new ExtendTreeNode(null, false, next.depth + 1));
-                }
-                if (rightTreeNode != null) {
-                    extendTreeNodes.add(new ExtendTreeNode(rightTreeNode, true, next.depth + 1));
-                } else {
-                    extendTreeNodes.add(new ExtendTreeNode(null, false, next.depth + 1));
-                }
-            } else {
-                //如果节点是虚拟节点,添加两个空节点站位
-                extendTreeNodes.add(new ExtendTreeNode(null, false, next.depth + 1));
-                extendTreeNodes.add(new ExtendTreeNode(null, false, next.depth + 1));
-            }
-        }
-
-        int currentMax = 0;
-        int tempMax = 0;
-        int currentDepth = 0;
-        boolean thisLineStarted = false;
-        for (ExtendTreeNode extendTreeNode : extendTreeNodes) {
-            //如果深度增加,初始化重新计数
-            if (currentDepth != extendTreeNode.depth) {
-                currentDepth = extendTreeNode.depth;
-                thisLineStarted = false;
-                tempMax = 0;
-            }
-            //如果当前行已经有了有效开始
-            if (thisLineStarted) {
-                //临时max增加
-                tempMax++;
-                //如果当前是真实节点,比较最大值
-                if (extendTreeNode.isRealNode) {
-                    currentMax = Math.max(currentMax, tempMax);
-                }
-            } else {
-                //如果还没有真实开始
-
-                //判断当前是否是真实节点
-                if (extendTreeNode.isRealNode) {
-                    thisLineStarted = true;
-                    tempMax++;
-                }
-            }
-        }
-
-        return currentMax;
-    }
-
-    public class ExtendTreeNode {
-        private TreeNode node;
-        private boolean isRealNode;
-        private int depth;
-
-        public ExtendTreeNode(TreeNode node, boolean isRealNode, int depth) {
-            this.node = node;
-            this.isRealNode = isRealNode;
-            this.depth = depth;
-        }
-    }
-
+    // 支持找到同行的下一个相邻节点
     public class TreeNode {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
+        public Integer value;
+        public TreeNode leftChild;
+        public TreeNode rightChild;
+        /**
+         * 右边相邻的节点
+         */
+        public TreeNode rightBeside;
 
-        TreeNode(int x) {
-            val = x;
+        public TreeNode(Integer value, TreeNode leftChild, TreeNode rightChild, TreeNode rightBeside) {
+            this.value = value;
+            this.leftChild = leftChild;
+            this.rightChild = rightChild;
+            this.rightBeside = rightBeside;
         }
     }
 
-    public TreeNode createTreeFromArray(Integer[] array) {
-        TreeNode root = new TreeNode(array[0]);
-
-        for (int i = 1; i < array.length; i++) {
-            String binaryString = Integer.toBinaryString(i + 1);
-            char[] chars = binaryString.toCharArray();
-            TreeNode parentNode = root;
-
-            for (int j = 1; j < chars.length - 1; j++) {
-                if (parentNode == null) {
-                    break;
-                }
-                if (chars[j] == '1') {
-                    parentNode = parentNode.left;
-                }
-                if (chars[j] == '0') {
-                    parentNode = parentNode.right;
-                }
+    public void printTree(TreeNode root) {
+        TreeNode currentHead = root;
+        while (currentHead != null) {
+            TreeNode currentNode = currentHead;
+            StringBuilder sb = new StringBuilder();
+            while (currentNode != null) {
+                sb.append(currentNode.value).append(",");
+                currentNode = currentNode.rightBeside;
             }
+            System.out.println(sb.toString());
+            currentHead = currentHead.leftChild;
+        }
+    }
 
-            if (array[i] != null && parentNode != null) {
-                if (chars[chars.length - 1] == '1') {
-                    parentNode.right = new TreeNode(array[i]);
+    // 将满二叉树数组还原为二叉树
+    public TreeNode getTreeFromArray(Integer[] treeArray) {
+        TreeNode root = new TreeNode(treeArray[0], null, null, null);
+        if (treeArray.length == 1) {
+            return root;
+        } else {
+            // 上一行的头node
+            TreeNode upLineHead = root;
+            // 上一行遍历到的当前node
+            TreeNode upLineCurrentNode = upLineHead;
+            // 当前行的头node
+            TreeNode currentHeadNode = null;
+            // 当前行的当前生成的node的前一个node
+            TreeNode currentPreviousNode = null;
+            int currentTreeArrayIndex = 1;
+
+            // 如果上一层没有遍历完,继续遍历
+            while (upLineCurrentNode != null) {
+                // 如果当前节点为null
+                if (upLineCurrentNode.value == null) {
+                    upLineCurrentNode.leftChild = new TreeNode(null, null, null, null);
+                    upLineCurrentNode.rightChild = new TreeNode(null, null, null, null);
+                    // 头结点的情况
+                    if (currentPreviousNode == null) {
+                        currentHeadNode = upLineCurrentNode.leftChild;
+                    } else {
+                        // 否则使用当前的currentPreviousNode rightBeside指向左孩子
+                        currentPreviousNode.rightBeside = upLineCurrentNode.leftChild;
+                    }
+                    currentPreviousNode = upLineCurrentNode.leftChild;
+                    currentPreviousNode.rightBeside = upLineCurrentNode.rightChild;
+                    currentPreviousNode = upLineCurrentNode.rightChild;
                 } else {
-                    parentNode.left = new TreeNode(array[i]);
+                    // 如果当前节点不为null,需要消耗数组中的元素
+                    if (currentTreeArrayIndex < treeArray.length) {
+                        upLineCurrentNode.leftChild = new TreeNode(treeArray[currentTreeArrayIndex++], null, null,
+                                null);
+                    }
+                    if (currentPreviousNode == null) {
+                        currentHeadNode = upLineCurrentNode.leftChild;
+                    } else {
+                        currentPreviousNode.rightBeside = upLineCurrentNode.leftChild;
+                        currentPreviousNode = upLineCurrentNode.leftChild;
+                    }
+                    currentPreviousNode = upLineCurrentNode.leftChild;
+                    if (currentTreeArrayIndex < treeArray.length) {
+                        upLineCurrentNode.rightChild = new TreeNode(treeArray[currentTreeArrayIndex++], null, null,
+                                null);
+                        currentPreviousNode.rightBeside = upLineCurrentNode.rightChild;
+                        currentPreviousNode = upLineCurrentNode.rightChild;
+                    }
+                }
+
+                upLineCurrentNode = upLineCurrentNode.rightBeside;
+
+                // 如果上一行已经遍历完了,上一行的头结点还有左孩子,继续遍历下一行
+                if (upLineCurrentNode == null && upLineHead.leftChild != null) {
+                    // 移动至下一行
+                    upLineCurrentNode = upLineHead.leftChild;
+                    // 如果新的一行所有的数据都为null,或只有一个数据不为null,跳出构建
+                    TreeNode tempNode = upLineCurrentNode;
+                    int tempCount = 0;
+                    while (tempNode != null) {
+                        if (tempNode.value != null) {
+                            tempCount++;
+                        }
+                        tempNode = tempNode.rightBeside;
+                    }
+                    if (tempCount < 1) {
+                        break;
+                    }
+
+                    // 重置相关的变量
+                    upLineHead = currentHeadNode;
+                    upLineCurrentNode = currentHeadNode;
+                    currentHeadNode = null;
+                    currentPreviousNode = null;
                 }
             }
         }
+
         return root;
     }
+
+    public int maxWidth(Integer[] treeArray) {
+        int maxWidth = 0;
+        TreeNode root = getTreeFromArray(treeArray);
+
+        TreeNode currentHead = root;
+        while (currentHead != null) {
+            TreeNode currentNode = currentHead;
+            boolean started = false;
+            int tempMax = 0;
+            while (currentNode != null) {
+                if (!started && currentNode.value != null) {
+                    started = true;
+                }
+                if (started) {
+                    tempMax++;
+                    maxWidth = Math.max(tempMax, maxWidth);
+                }
+                currentNode = currentNode.rightBeside;
+            }
+            currentHead = currentHead.leftChild;
+        }
+
+        return maxWidth;
+    }
+
 }
