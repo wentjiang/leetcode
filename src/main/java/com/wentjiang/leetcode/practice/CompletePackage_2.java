@@ -7,9 +7,13 @@ public class CompletePackage_2 {
     /**
      * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
      *
-     * @param v    int整型
-     * @param n    int整型
-     * @param nums int整型ArrayList<ArrayList<>>
+     * @param v
+     *            int整型
+     * @param n
+     *            int整型
+     * @param nums
+     *            int整型ArrayList<ArrayList<>>
+     * 
      * @return int整型ArrayList
      */
     public ArrayList<Integer> knapsack(int v, int n, ArrayList<ArrayList<Integer>> nums) {
@@ -27,23 +31,24 @@ public class CompletePackage_2 {
             for (int currentWeight = 0; currentWeight <= volume; currentWeight++) {
                 int previousIndex = currentWeight - items.get(itemIndex).get(0);
                 int increasedValue = items.get(itemIndex).get(1);
-                //计算最大值
+                // 计算最大值
                 if (previousIndex >= 0) {
                     increasedValue = maxValueDP[previousIndex] + increasedValue;
                     maxValueDP[currentWeight] = Math.max(maxValueDP[currentWeight], increasedValue);
 
-                    //计算能完全装满的最大值
+                    // 计算能完全装满的最大值
                     if (maxFullValueDP[previousIndex] != -1) {
-                        maxFullValueDP[currentWeight] = Math.max(maxFullValueDP[currentWeight], items.get(itemIndex).get(1) + maxFullValueDP[previousIndex]);
+                        maxFullValueDP[currentWeight] = Math.max(maxFullValueDP[currentWeight],
+                                items.get(itemIndex).get(1) + maxFullValueDP[previousIndex]);
                     }
                 }
             }
         }
         ArrayList<Integer> result = new ArrayList<>();
         result.add(maxValueDP[volume]);
-        if (maxFullValueDP[volume] != -1){
+        if (maxFullValueDP[volume] != -1) {
             result.add(maxFullValueDP[volume]);
-        }else{
+        } else {
             result.add(0);
         }
         return result;

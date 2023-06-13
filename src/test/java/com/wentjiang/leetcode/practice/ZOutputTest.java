@@ -25,7 +25,6 @@ class ZOutputTest {
         Assertions.assertEquals("n", result);
     }
 
-
     @Test
     public void case4() {
         String result = zOutput.zconvert("no", 4);

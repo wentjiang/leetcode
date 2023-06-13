@@ -4,7 +4,7 @@ public class Question2139 {
     public int minMoves(int target, int maxDoubles) {
         int moveCount = 0;
         while (target != 1) {
-            //先考虑使用所有次数的double
+            // 先考虑使用所有次数的double
             if (target % 2 != 0) {
                 target--;
             } else {

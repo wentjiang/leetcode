@@ -21,9 +21,9 @@ class Day2Question1Test {
         result.add(cache.get(1));
         result.add(cache.get(2));
         result.add(cache.get(3));
-        Integer[] array = result.toArray(new Integer[]{result.size()});
+        Integer[] array = result.toArray(new Integer[] { result.size() });
 
-        Assertions.assertArrayEquals(new Integer[]{1, 1, -1, 3}, array);
+        Assertions.assertArrayEquals(new Integer[] { 1, 1, -1, 3 }, array);
     }
 
 }
