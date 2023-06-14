@@ -24,6 +24,7 @@ public class Day2Question3 {
         }
     }
 
+    // 用来查看还原的结果
     public void printTree(TreeNode root) {
         TreeNode currentHead = root;
         while (currentHead != null) {
@@ -134,10 +135,12 @@ public class Day2Question3 {
             while (currentNode != null) {
                 if (!started && currentNode.value != null) {
                     started = true;
-                }
-                if (started) {
                     tempMax++;
-                    maxWidth = Math.max(tempMax, maxWidth);
+                } else if (started) {
+                    tempMax++;
+                    if (currentNode.value != null) {
+                        maxWidth = Math.max(tempMax, maxWidth);
+                    }
                 }
                 currentNode = currentNode.rightBeside;
             }
