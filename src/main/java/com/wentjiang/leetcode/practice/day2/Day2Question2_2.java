@@ -24,9 +24,10 @@ public class Day2Question2_2 {
         for (int num : forbidden) {
             forbiddenSet.add(num);
         }
-        int max = Math.max(Arrays.stream(forbidden).max().orElse(0), target + jumpBack);
+        int bound = Math.max(Arrays.stream(forbidden).max().orElse(0) + jumpForward + jumpBack, target + jumpBack);
 
         Queue<CurrentState> states = new ArrayDeque<>();
+
         states.add(new CurrentState(0, 0, false));
         while (!states.isEmpty()) {
             CurrentState currentState = states.poll();
@@ -35,16 +36,16 @@ public class Day2Question2_2 {
                 return currentState.count;
             }
 
-            //向右跳
+            // 向右跳
             int jumpForwardIndex = currentState.currentIndex + jumpForward;
-            if (jumpForwardIndex <= max && !forbiddenSet.contains(jumpForwardIndex)) {
+            if (!forbiddenSet.contains(jumpForwardIndex) && jumpForwardIndex <= bound) {
                 states.add(new CurrentState(jumpForwardIndex, currentState.count + 1, false));
                 forbiddenSet.add(jumpForwardIndex);
             }
 
-            //向左跳
+            // 向左跳
             int jumpBackIndex = currentState.currentIndex - jumpBack;
-            if (jumpBackIndex > 0 && !forbiddenSet.contains(jumpBackIndex) && !currentState.hasJumpBack) {
+            if (!currentState.hasJumpBack && jumpBackIndex > 0 && !forbiddenSet.contains(jumpBackIndex)) {
                 states.add(new CurrentState(jumpBackIndex, currentState.count + 1, true));
             }
         }
