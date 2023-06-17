@@ -3,6 +3,7 @@ package com.wentjiang.leetcode.practice.day2;
 import java.util.HashSet;
 import java.util.Set;
 
+//存在空指针的问题
 public class Day2Question2 {
 
     public class TreeNode {
