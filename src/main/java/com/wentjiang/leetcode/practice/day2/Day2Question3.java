@@ -1,22 +1,22 @@
 package com.wentjiang.leetcode.practice.day2;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
+/**
+ * leetcode 662 @see {@link com.wentjiang.leetcode.q601_700.Question662}
+ */
 public class Day2Question3 {
 
     // 支持找到同行的下一个相邻节点
-    public class TreeNode {
+    public class ExtendedTreeNode {
         public Integer value;
-        public TreeNode leftChild;
-        public TreeNode rightChild;
+        public ExtendedTreeNode leftChild;
+        public ExtendedTreeNode rightChild;
         /**
          * 右边相邻的节点
          */
-        public TreeNode rightBeside;
+        public ExtendedTreeNode rightBeside;
 
-        public TreeNode(Integer value, TreeNode leftChild, TreeNode rightChild, TreeNode rightBeside) {
+        public ExtendedTreeNode(Integer value, ExtendedTreeNode leftChild, ExtendedTreeNode rightChild,
+                ExtendedTreeNode rightBeside) {
             this.value = value;
             this.leftChild = leftChild;
             this.rightChild = rightChild;
@@ -25,10 +25,10 @@ public class Day2Question3 {
     }
 
     // 用来查看还原的结果
-    public void printTree(TreeNode root) {
-        TreeNode currentHead = root;
+    public void printTree(ExtendedTreeNode root) {
+        ExtendedTreeNode currentHead = root;
         while (currentHead != null) {
-            TreeNode currentNode = currentHead;
+            ExtendedTreeNode currentNode = currentHead;
             StringBuilder sb = new StringBuilder();
             while (currentNode != null) {
                 sb.append(currentNode.value).append(",");
@@ -40,27 +40,27 @@ public class Day2Question3 {
     }
 
     // 将满二叉树数组还原为二叉树
-    public TreeNode getTreeFromArray(Integer[] treeArray) {
-        TreeNode root = new TreeNode(treeArray[0], null, null, null);
+    public ExtendedTreeNode getTreeFromArray(Integer[] treeArray) {
+        ExtendedTreeNode root = new ExtendedTreeNode(treeArray[0], null, null, null);
         if (treeArray.length == 1) {
             return root;
         } else {
             // 上一行的头node
-            TreeNode upLineHead = root;
+            ExtendedTreeNode upLineHead = root;
             // 上一行遍历到的当前node
-            TreeNode upLineCurrentNode = upLineHead;
+            ExtendedTreeNode upLineCurrentNode = upLineHead;
             // 当前行的头node
-            TreeNode currentHeadNode = null;
+            ExtendedTreeNode currentHeadNode = null;
             // 当前行的当前生成的node的前一个node
-            TreeNode currentPreviousNode = null;
+            ExtendedTreeNode currentPreviousNode = null;
             int currentTreeArrayIndex = 1;
 
             // 如果上一层没有遍历完,继续遍历
             while (upLineCurrentNode != null) {
                 // 如果当前节点为null
                 if (upLineCurrentNode.value == null) {
-                    upLineCurrentNode.leftChild = new TreeNode(null, null, null, null);
-                    upLineCurrentNode.rightChild = new TreeNode(null, null, null, null);
+                    upLineCurrentNode.leftChild = new ExtendedTreeNode(null, null, null, null);
+                    upLineCurrentNode.rightChild = new ExtendedTreeNode(null, null, null, null);
                     // 头结点的情况
                     if (currentPreviousNode == null) {
                         currentHeadNode = upLineCurrentNode.leftChild;
@@ -74,8 +74,8 @@ public class Day2Question3 {
                 } else {
                     // 如果当前节点不为null,需要消耗数组中的元素
                     if (currentTreeArrayIndex < treeArray.length) {
-                        upLineCurrentNode.leftChild = new TreeNode(treeArray[currentTreeArrayIndex++], null, null,
-                                null);
+                        upLineCurrentNode.leftChild = new ExtendedTreeNode(treeArray[currentTreeArrayIndex++], null,
+                                null, null);
                     }
                     if (currentPreviousNode == null) {
                         currentHeadNode = upLineCurrentNode.leftChild;
@@ -85,8 +85,8 @@ public class Day2Question3 {
                     }
                     currentPreviousNode = upLineCurrentNode.leftChild;
                     if (currentTreeArrayIndex < treeArray.length) {
-                        upLineCurrentNode.rightChild = new TreeNode(treeArray[currentTreeArrayIndex++], null, null,
-                                null);
+                        upLineCurrentNode.rightChild = new ExtendedTreeNode(treeArray[currentTreeArrayIndex++], null,
+                                null, null);
                         currentPreviousNode.rightBeside = upLineCurrentNode.rightChild;
                         currentPreviousNode = upLineCurrentNode.rightChild;
                     }
@@ -99,7 +99,7 @@ public class Day2Question3 {
                     // 移动至下一行
                     upLineCurrentNode = upLineHead.leftChild;
                     // 如果新的一行所有的数据都为null,或只有一个数据不为null,跳出构建
-                    TreeNode tempNode = upLineCurrentNode;
+                    ExtendedTreeNode tempNode = upLineCurrentNode;
                     int tempCount = 0;
                     while (tempNode != null) {
                         if (tempNode.value != null) {
@@ -125,11 +125,11 @@ public class Day2Question3 {
 
     public int maxWidth(Integer[] treeArray) {
         int maxWidth = 0;
-        TreeNode root = getTreeFromArray(treeArray);
+        ExtendedTreeNode root = getTreeFromArray(treeArray);
 
-        TreeNode currentHead = root;
+        ExtendedTreeNode currentHead = root;
         while (currentHead != null) {
-            TreeNode currentNode = currentHead;
+            ExtendedTreeNode currentNode = currentHead;
             boolean started = false;
             int tempMax = 0;
             while (currentNode != null) {

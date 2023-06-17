@@ -1,11 +1,8 @@
-package com.wentjiang.leetcode.practice.day2;
+package com.wentjiang.leetcode.q1601_1700;
 
 import java.util.*;
 
-/**
- * leetcode 1654 @see {@link com.wentjiang.leetcode.q1601_1700.Question1654}
- */
-public class Day2Question2_2 {
+public class Question1654 {
 
     public static class CurrentState {
         private final int currentIndex;

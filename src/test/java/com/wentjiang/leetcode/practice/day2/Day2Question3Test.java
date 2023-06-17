@@ -24,20 +24,20 @@ class Day2Question3Test {
 
     @Test
     public void testPrintTree1() {
-        Day2Question3.TreeNode root = day2Question3.getTreeFromArray(new Integer[] { 1, 3, 2, 5, 3, null, 9 });
+        Day2Question3.ExtendedTreeNode root = day2Question3.getTreeFromArray(new Integer[] { 1, 3, 2, 5, 3, null, 9 });
         day2Question3.printTree(root);
     }
 
     @Test
     public void testPrintTree2() {
-        Day2Question3.TreeNode root = day2Question3
+        Day2Question3.ExtendedTreeNode root = day2Question3
                 .getTreeFromArray(new Integer[] { 1, 3, 2, 5, null, null, 9, 6, null, 7 });
         day2Question3.printTree(root);
     }
 
     @Test
     public void testPrintTree3() {
-        Day2Question3.TreeNode root = day2Question3.getTreeFromArray(new Integer[] { 1, 3, 2, 5 });
+        Day2Question3.ExtendedTreeNode root = day2Question3.getTreeFromArray(new Integer[] { 1, 3, 2, 5 });
         day2Question3.printTree(root);
     }
 
