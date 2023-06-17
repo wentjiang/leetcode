@@ -41,7 +41,7 @@ class Day2Question2_2Test {
     public void case5() {
         int[] forbidden = new int[] { 8, 3, 16, 6, 12, 20 };
         int result = day2Question2_2.minimumJumps(forbidden, 15, 13, 11);
-        Assertions.assertEquals(25, result);
+        Assertions.assertEquals(-1, result);
     }
 
 }
