@@ -1,4 +1,4 @@
-package com.wentjiang.leetcode.practice;
+package com.wentjiang.leetcode.practice.day1_1;
 
 import java.util.ArrayList;
 

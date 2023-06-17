@@ -1,5 +1,6 @@
-package com.wentjiang.leetcode.practice;
+package java.com.wentjiang.leetcode.practice.day1_1;
 
+import com.wentjiang.leetcode.practice.day1_1.ZOutput;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

@@ -1,6 +1,5 @@
-package com.wentjiang.leetcode.practice;
+package com.wentjiang.leetcode.practice.day1_1;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
