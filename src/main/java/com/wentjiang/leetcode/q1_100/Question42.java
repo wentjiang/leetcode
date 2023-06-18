@@ -15,8 +15,6 @@ public class Question42 {
                 i++;
                 continue;
             }
-            // 当前高度
-            int current = height[i];
             // 后边比当前高度高的高度
             int higher = 0;
             // 后边比当前高度高的索引
