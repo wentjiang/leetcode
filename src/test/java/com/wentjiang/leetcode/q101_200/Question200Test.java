@@ -3,10 +3,6 @@ package com.wentjiang.leetcode.q101_200;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.awt.desktop.QuitEvent;
-
-import static org.junit.jupiter.api.Assertions.*;
-
 class Question200Test {
 
     private Question200 question200 = new Question200();
