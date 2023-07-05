@@ -2,6 +2,9 @@ package com.wentjiang.leetcode.practice.q_100;
 
 import java.util.*;
 
+/**
+ * 快递站业务
+ */
 public class Question_100_1 {
 
     public int expressStation(int[][] graph) {
