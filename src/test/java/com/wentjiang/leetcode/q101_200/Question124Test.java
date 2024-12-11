@@ -1,8 +1,9 @@
 package com.wentjiang.leetcode.q101_200;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author wentao.jiang
@@ -13,11 +14,11 @@ import org.junit.Test;
  */
 public class Question124Test {
 
-    private Question124 question124;
-    private Question124.TreeNode root;
+    private static Question124 question124;
+    private static Question124.TreeNode root;
 
-    @Before
-    public void setUp() throws Exception {
+    @BeforeAll
+    public static void setUp() throws Exception {
         question124 = new Question124();
         root = new Question124.TreeNode(1);
         root.left = new Question124.TreeNode(2);
@@ -25,6 +26,6 @@ public class Question124Test {
 
     @Test
     public void maxPathSum() {
-        Assert.assertEquals(3, question124.maxPathSum(root));
+        assertEquals(3, question124.maxPathSum(root));
     }
 }

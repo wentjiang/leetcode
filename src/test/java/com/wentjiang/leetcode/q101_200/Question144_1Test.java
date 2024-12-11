@@ -1,7 +1,6 @@
 package com.wentjiang.leetcode.q101_200;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author wentao.jiang
@@ -12,12 +11,7 @@ import org.junit.Test;
  */
 public class Question144_1Test {
 
-    private Question144_1 question144_1;
-
-    @Before
-    public void setUp() throws Exception {
-        question144_1 = new Question144_1();
-    }
+    private Question144_1 question144_1 = new Question144_1();
 
     @Test
     public void preorderTraversal() {

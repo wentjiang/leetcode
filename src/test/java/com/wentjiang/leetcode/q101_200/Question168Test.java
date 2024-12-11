@@ -1,18 +1,12 @@
 package com.wentjiang.leetcode.q101_200;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Question168Test {
 
-    private Question168 question168;
-
-    @Before
-    public void setUp() throws Exception {
-        question168 = new Question168();
-    }
+    private Question168 question168 = new Question168();
 
     @Test
     public void convertToTitle() {

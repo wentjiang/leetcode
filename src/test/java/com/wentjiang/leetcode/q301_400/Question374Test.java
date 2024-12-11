@@ -1,9 +1,7 @@
 package com.wentjiang.leetcode.q301_400;
 
-import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 public class Question374Test {
 

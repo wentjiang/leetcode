@@ -1,6 +1,6 @@
 package com.wentjiang.leetcode.q101_200;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author wentao.jiang

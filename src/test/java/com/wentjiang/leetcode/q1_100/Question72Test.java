@@ -1,10 +1,8 @@
 package com.wentjiang.leetcode.q1_100;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author wentao.jiang
@@ -41,25 +39,20 @@ public class Question72Test {
     // exention -> exection (将 'n' 替换为 'c')
     // exection -> execution (插入 'u')
 
-    private Question72 question72;
-
-    @Before
-    public void setUp() throws Exception {
-        question72 = new Question72();
-    }
+    private Question72 question72 = new Question72();
 
     @Test
     public void minDistance() {
-        Assert.assertEquals(3, question72.minDistance("horse", "ros"));
+        assertEquals(3, question72.minDistance("horse", "ros"));
     }
 
     @Test
     public void minDistance1() {
-        Assert.assertEquals(5, question72.minDistance("intention", "execution"));
+        assertEquals(5, question72.minDistance("intention", "execution"));
     }
 
     @Test
     public void minDistance2() {
-        Assert.assertEquals(6, question72.minDistance("plasma", "altruism"));
+        assertEquals(6, question72.minDistance("plasma", "altruism"));
     }
 }

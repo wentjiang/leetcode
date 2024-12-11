@@ -1,9 +1,7 @@
 package com.wentjiang.leetcode.q401_500;
 
-import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 public class Question495Test {
 

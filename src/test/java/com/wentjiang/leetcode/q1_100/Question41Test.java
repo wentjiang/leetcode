@@ -1,9 +1,8 @@
 package com.wentjiang.leetcode.q1_100;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author wentao.jiang
@@ -14,12 +13,7 @@ import static org.junit.Assert.*;
  */
 public class Question41Test {
 
-    private Question41 question41;
-
-    @Before
-    public void setUp() throws Exception {
-        question41 = new Question41();
-    }
+    private Question41 question41 = new Question41();
 
     @Test
     public void firstMissingPositive2() {

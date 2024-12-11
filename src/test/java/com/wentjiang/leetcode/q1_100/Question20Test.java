@@ -1,9 +1,9 @@
 package com.wentjiang.leetcode.q1_100;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * @author wentaojiang
@@ -14,12 +14,7 @@ import static org.junit.Assert.*;
  */
 public class Question20Test {
 
-    private Question20 question20;
-
-    @Before
-    public void setUp() throws Exception {
-        question20 = new Question20();
-    }
+    private Question20 question20 = new Question20();
 
     @Test
     public void isValid1() {

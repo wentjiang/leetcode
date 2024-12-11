@@ -1,6 +1,6 @@
 package com.wentjiang.leetcode.q801_900;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
 public class Question844_3Test {

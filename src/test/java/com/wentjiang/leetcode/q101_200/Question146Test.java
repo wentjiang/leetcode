@@ -1,10 +1,8 @@
 package com.wentjiang.leetcode.q101_200;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author wentao.jiang
@@ -15,23 +13,18 @@ import static org.junit.Assert.*;
  */
 public class Question146Test {
 
-    private Question146.LRUCache cache;
-
-    @Before
-    public void setUp() throws Exception {
-        cache = new Question146.LRUCache(2);
-    }
+    private Question146.LRUCache cache = new Question146.LRUCache(2);
 
     @Test
     public void test() {
         cache.put(1, 1);
         cache.put(2, 2);
-        Assert.assertEquals(1, cache.get(1)); // 返回 1
+        assertEquals(1, cache.get(1)); // 返回 1
         cache.put(3, 3); // 该操作会使得密钥 2 作废
-        Assert.assertEquals(-1, cache.get(2));// 返回 -1 (未找到)
+        assertEquals(-1, cache.get(2));// 返回 -1 (未找到)
         cache.put(4, 4); // 该操作会使得密钥 1 作废
-        Assert.assertEquals(-1, cache.get(1));// 返回 -1 (未找到)
-        Assert.assertEquals(3, cache.get(3));// 返回 3
-        Assert.assertEquals(4, cache.get(4));
+        assertEquals(-1, cache.get(1));// 返回 -1 (未找到)
+        assertEquals(3, cache.get(3));// 返回 3
+        assertEquals(4, cache.get(4));
     }
 }

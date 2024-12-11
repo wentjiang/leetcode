@@ -1,9 +1,8 @@
 package com.wentjiang.leetcode.q101_200;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author wentao.jiang
@@ -14,12 +13,7 @@ import static org.junit.Assert.*;
  */
 public class Question152Test {
 
-    private Question152 question152;
-
-    @Before
-    public void setUp() throws Exception {
-        question152 = new Question152();
-    }
+    private Question152 question152 = new Question152();
 
     @Test
     public void maxProduct() {

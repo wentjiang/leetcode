@@ -1,10 +1,8 @@
 package com.wentjiang.leetcode.q1_100;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author wentao.jiang
@@ -15,20 +13,15 @@ import static org.junit.Assert.*;
  */
 public class Question67Test {
 
-    private Question67 question67;
-
-    @Before
-    public void setUp() throws Exception {
-        question67 = new Question67();
-    }
+    private Question67 question67 = new Question67();
 
     @Test
     public void addBinary() {
-        Assert.assertEquals("100", question67.addBinary("11", "1"));
+        assertEquals("100", question67.addBinary("11", "1"));
     }
 
     @Test
     public void addBinary2() {
-        Assert.assertEquals("10101", question67.addBinary("1010", "1011"));
+        assertEquals("10101", question67.addBinary("1010", "1011"));
     }
 }

@@ -2,9 +2,8 @@ package com.wentjiang.leetcode.q1_100;
 
 import com.wentjiang.leetcode.utils.ListNode;
 import com.wentjiang.leetcode.utils.ListNodeUtil;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author wentaojiang
@@ -15,15 +14,10 @@ import org.junit.Test;
  */
 public class Question21Test {
 
-    private Question21 question21;
-
-    @Before
-    public void setUp() throws Exception {
-        question21 = new Question21();
-    }
+    private Question21 question21 = new Question21();
 
     @Test
-    @Ignore
+    @Disabled
     public void mergeTwoLists() {
         ListNode l1 = ListNodeUtil.createListNodeByArray(new int[] { 1, 2, 4 });
         ListNode l2 = ListNodeUtil.createListNodeByArray(new int[] { 1, 3, 4 });

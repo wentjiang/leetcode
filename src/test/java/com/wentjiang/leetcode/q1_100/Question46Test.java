@@ -1,9 +1,6 @@
 package com.wentjiang.leetcode.q1_100;
 
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author wentao.jiang
@@ -14,12 +11,7 @@ import static org.junit.Assert.*;
  */
 public class Question46Test {
 
-    private Question46 question46;
-
-    @Before
-    public void setUp() throws Exception {
-        question46 = new Question46();
-    }
+    private Question46 question46 = new Question46();
 
     @Test
     public void permute() {

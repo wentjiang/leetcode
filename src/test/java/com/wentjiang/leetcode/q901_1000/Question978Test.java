@@ -1,7 +1,7 @@
 package com.wentjiang.leetcode.q901_1000;
 
-import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class Question978Test {
 

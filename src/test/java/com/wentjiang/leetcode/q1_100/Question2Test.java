@@ -1,13 +1,11 @@
 package com.wentjiang.leetcode.q1_100;
 
-import com.wentjiang.leetcode.q1_100.Question2;
 import com.wentjiang.leetcode.utils.ListNode;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.stream.Stream;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author wentaojiang
@@ -18,12 +16,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class Question2Test {
 
-    private Question2 question2;
-
-    @Before
-    public void setUp() throws Exception {
-        question2 = new Question2();
-    }
+    private Question2 question2 = new Question2();
 
     @Test
     public void addTwoNumbers() {

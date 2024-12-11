@@ -2,10 +2,7 @@ package com.wentjiang.leetcode.q1_100;
 
 import com.wentjiang.leetcode.utils.ListNode;
 import com.wentjiang.leetcode.utils.ListNodeUtil;
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author wentaojiang
@@ -16,12 +13,7 @@ import static org.junit.Assert.*;
  */
 public class Question19Test {
 
-    private Question19 question19;
-
-    @Before
-    public void setUp() throws Exception {
-        question19 = new Question19();
-    }
+    private Question19 question19 = new Question19();
 
     @Test
     public void removeNthFromEnd1() {

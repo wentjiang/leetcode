@@ -1,17 +1,9 @@
 package com.wentjiang.leetcode.q701_800;
 
-import com.wentjiang.leetcode.q1_100.Question1;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Question733Test {
-    private Question733 question733;
-
-    @Before
-    public void before() {
-        question733 = new Question733();
-    }
+    private Question733 question733 = new Question733();
 
     @Test
     public void floodFill1() {

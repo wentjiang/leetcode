@@ -17,7 +17,7 @@ public class Question_100_1 {
         List<Integer> stack = new ArrayList<>();
         for (int i = 0; i < graph.length; i++) {
             for (int j = i; j < graph.length; j++) {
-                if (graph[i][j] == 1){
+                if (graph[i][j] == 1) {
 
                 }
             }

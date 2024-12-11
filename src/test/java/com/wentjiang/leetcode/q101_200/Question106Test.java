@@ -1,9 +1,6 @@
 package com.wentjiang.leetcode.q101_200;
 
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author wentao.jiang
@@ -14,12 +11,7 @@ import static org.junit.Assert.*;
  */
 public class Question106Test {
 
-    private Question106 question106;
-
-    @Before
-    public void setUp() throws Exception {
-        question106 = new Question106();
-    }
+    private Question106 question106 = new Question106();
 
     @Test
     public void buildTree() {

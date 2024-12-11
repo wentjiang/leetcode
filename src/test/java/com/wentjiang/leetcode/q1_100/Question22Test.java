@@ -1,7 +1,6 @@
 package com.wentjiang.leetcode.q1_100;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
@@ -14,12 +13,7 @@ import java.util.List;
  */
 public class Question22Test {
 
-    private Question22 question22;
-
-    @Before
-    public void setUp() throws Exception {
-        question22 = new Question22();
-    }
+    private Question22 question22 = new Question22();
 
     @Test
     public void generateParenthesis() {

@@ -1,7 +1,5 @@
 package com.wentjiang.leetcode.q1_100;
 
-import org.junit.Before;
-
 /**
  * @author wentaojiang
  * 
@@ -11,12 +9,8 @@ import org.junit.Before;
  */
 public class Question15Test {
 
-    private Question15 question15;
+    private Question15 question15 = new Question15();
 
-    @Before
-    public void setUp() throws Exception {
-        question15 = new Question15();
-    }
     // 测试不可用
     // @Test
     // public void threeSum() {

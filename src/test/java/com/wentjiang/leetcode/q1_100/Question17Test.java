@@ -1,9 +1,6 @@
 package com.wentjiang.leetcode.q1_100;
 
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author wentaojiang
@@ -14,12 +11,7 @@ import static org.junit.Assert.*;
  */
 public class Question17Test {
 
-    private Question17 question17;
-
-    @Before
-    public void setUp() throws Exception {
-        question17 = new Question17();
-    }
+    private Question17 question17 = new Question17();
 
     @Test
     public void letterCombinations() {

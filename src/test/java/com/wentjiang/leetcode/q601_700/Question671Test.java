@@ -1,10 +1,8 @@
 package com.wentjiang.leetcode.q601_700;
 
 import com.wentjiang.leetcode.utils.TreeNode;
-import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 public class Question671Test {
 

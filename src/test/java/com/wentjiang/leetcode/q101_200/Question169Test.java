@@ -1,10 +1,8 @@
 package com.wentjiang.leetcode.q101_200;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author wentao.jiang
@@ -15,20 +13,15 @@ import static org.junit.Assert.*;
  */
 public class Question169Test {
 
-    private Question169 question_169;
-
-    @Before
-    public void setUp() throws Exception {
-        question_169 = new Question169();
-    }
+    private Question169 question_169 = new Question169();
 
     @Test
     public void majorityElement() {
-        Assert.assertEquals(2, question_169.majorityElement(new int[] { 2, 2, 1, 1, 1, 2, 2 }));
+        assertEquals(2, question_169.majorityElement(new int[] { 2, 2, 1, 1, 1, 2, 2 }));
     }
 
     @Test
     public void majorityElement1() {
-        Assert.assertEquals(3, question_169.majorityElement(new int[] { 3, 2, 3 }));
+        assertEquals(3, question_169.majorityElement(new int[] { 3, 2, 3 }));
     }
 }

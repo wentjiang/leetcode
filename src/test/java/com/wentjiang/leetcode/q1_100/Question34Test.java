@@ -1,8 +1,8 @@
 package com.wentjiang.leetcode.q1_100;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 /**
  * @author wentaojiang
@@ -13,20 +13,15 @@ import org.junit.Test;
  */
 public class Question34Test {
 
-    private Question34 question34;
-
-    @Before
-    public void setUp() throws Exception {
-        question34 = new Question34();
-    }
+    private Question34 question34 = new Question34();
 
     @Test
     public void searchRange() {
-        Assert.assertArrayEquals(new int[] { 3, 4 }, question34.searchRange(new int[] { 5, 7, 7, 8, 8, 10 }, 8));
+        assertArrayEquals(new int[] { 3, 4 }, question34.searchRange(new int[] { 5, 7, 7, 8, 8, 10 }, 8));
     }
 
     @Test
     public void searchRange1() {
-        Assert.assertArrayEquals(new int[] { -1, -1 }, question34.searchRange(new int[] { 5, 7, 7, 8, 8, 10 }, 6));
+        assertArrayEquals(new int[] { -1, -1 }, question34.searchRange(new int[] { 5, 7, 7, 8, 8, 10 }, 6));
     }
 }

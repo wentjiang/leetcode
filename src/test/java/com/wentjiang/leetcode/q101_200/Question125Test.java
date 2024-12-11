@@ -1,10 +1,8 @@
 package com.wentjiang.leetcode.q101_200;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author wentao.jiang
@@ -15,25 +13,20 @@ import static org.junit.Assert.*;
  */
 public class Question125Test {
 
-    private Question125 question125;
-
-    @Before
-    public void setUp() throws Exception {
-        question125 = new Question125();
-    }
+    private Question125 question125 = new Question125();
 
     @Test
     public void isPalindrome() {
-        Assert.assertEquals(true, question125.isPalindrome("A man, a plan, a canal: Panama"));
+        assertTrue(question125.isPalindrome("A man, a plan, a canal: Panama"));
     }
 
     @Test
     public void isPalindrome1() {
-        Assert.assertEquals(false, question125.isPalindrome("race a car"));
+        assertFalse(question125.isPalindrome("race a car"));
     }
 
     @Test
     public void isPalindrome2() {
-        Assert.assertEquals(false, question125.isPalindrome("0P"));
+        assertFalse(question125.isPalindrome("0P"));
     }
 }

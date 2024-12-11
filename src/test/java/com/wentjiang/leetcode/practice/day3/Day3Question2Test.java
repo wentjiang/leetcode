@@ -8,14 +8,14 @@ class Day3Question2Test {
 
     @Test
     public void case1() {
-        int result = day3Question2.question(new int[]{2,1,5,6,2,3});
-        Assertions.assertEquals(10,result);
+        int result = day3Question2.question(new int[] { 2, 1, 5, 6, 2, 3 });
+        Assertions.assertEquals(10, result);
     }
 
     @Test
     public void case2() {
-        int result = day3Question2.question(new int[]{2,4});
-        Assertions.assertEquals(4,result);
+        int result = day3Question2.question(new int[] { 2, 4 });
+        Assertions.assertEquals(4, result);
     }
 
 }

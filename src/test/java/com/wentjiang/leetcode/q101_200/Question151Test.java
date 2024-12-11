@@ -1,9 +1,8 @@
 package com.wentjiang.leetcode.q101_200;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author wentao.jiang
@@ -14,12 +13,7 @@ import static org.junit.Assert.*;
  */
 public class Question151Test {
 
-    private Question151 question151;
-
-    @Before
-    public void setUp() throws Exception {
-        question151 = new Question151();
-    }
+    private Question151 question151 = new Question151();
 
     @Test
     public void reverseWords() {

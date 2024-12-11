@@ -1,9 +1,8 @@
 package com.wentjiang.leetcode.q1_100;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author wentao.jiang
@@ -14,12 +13,7 @@ import static org.junit.Assert.*;
  */
 public class Question32Test {
 
-    private Question32 question32;
-
-    @Before
-    public void setUp() throws Exception {
-        question32 = new Question32();
-    }
+    private Question32 question32 = new Question32();
 
     @Test
     public void longestValidParentheses() {

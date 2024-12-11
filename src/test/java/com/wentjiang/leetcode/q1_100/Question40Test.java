@@ -1,9 +1,6 @@
 package com.wentjiang.leetcode.q1_100;
 
-import org.junit.Before;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author wentaojiang
@@ -14,12 +11,7 @@ import static org.junit.Assert.*;
  */
 public class Question40Test {
 
-    private Question40 question40;
-
-    @Before
-    public void setUp() throws Exception {
-        question40 = new Question40();
-    }
+    private Question40 question40 = new Question40();
 
     @Test
     public void combinationSum2() {

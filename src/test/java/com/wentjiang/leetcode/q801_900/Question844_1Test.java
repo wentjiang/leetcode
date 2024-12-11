@@ -1,7 +1,7 @@
 package com.wentjiang.leetcode.q801_900;
 
-import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class Question844_1Test {
     private Question844_1 question844 = new Question844_1();

@@ -1,9 +1,8 @@
 package com.wentjiang.leetcode.q1_100;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author wentao.jiang
@@ -13,12 +12,7 @@ import static org.junit.Assert.*;
  * @description
  */
 public class Question45Test {
-    private Question45 question45;
-
-    @Before
-    public void setUp() throws Exception {
-        question45 = new Question45();
-    }
+    private Question45 question45 = new Question45();
 
     @Test
     public void jump() {

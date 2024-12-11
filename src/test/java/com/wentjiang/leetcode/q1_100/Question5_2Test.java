@@ -1,8 +1,8 @@
 package com.wentjiang.leetcode.q1_100;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author wentaojiang
@@ -12,42 +12,37 @@ import org.junit.Test;
  * @description
  */
 public class Question5_2Test {
-    private Question5_2 question5;
-
-    @Before
-    public void setUp() throws Exception {
-        question5 = new Question5_2();
-    }
+    private Question5_2 question5 = new Question5_2();
 
     @Test
     public void longestPalindrome1() {
-        Assert.assertEquals("bab", question5.longestPalindrome("babad"));
+        assertEquals("bab", question5.longestPalindrome("babad"));
     }
 
     @Test
     public void longestPalindrome2() {
-        Assert.assertEquals("bb", question5.longestPalindrome("cbbd"));
+        assertEquals("bb", question5.longestPalindrome("cbbd"));
     }
 
     @Test
     public void longestPalindrome3() {
-        Assert.assertEquals("bb", question5.longestPalindrome("bb"));
+        assertEquals("bb", question5.longestPalindrome("bb"));
     }
 
     @Test
     public void longestPalindrome4() {
-        Assert.assertEquals("ccc", question5.longestPalindrome("ccc"));
+        assertEquals("ccc", question5.longestPalindrome("ccc"));
     }
 
     @Test
     public void longestPalindrome5() {
-        Assert.assertEquals("bb", question5.longestPalindrome("abcdbbfcba"));
+        assertEquals("bb", question5.longestPalindrome("abcdbbfcba"));
     }
 
     @Test
     // @Ignore
     public void longestPalindrome6() {
-        Assert.assertEquals("khvhk", question5.longestPalindrome("mwwfjysbkebpdjyabcfkgprtxpwvhglddhmvaprcvrnu"
+        assertEquals("khvhk", question5.longestPalindrome("mwwfjysbkebpdjyabcfkgprtxpwvhglddhmvaprcvrnu"
                 + "xifcrjpdgnktvmggmguiiquibmtviwjsqwtchkqgxqwljouunurcdtoeygdqmijdympcamawnlzsxucbpqtuwkjfqnzvvvigifyvymfhtpp"
                 + "qamlgjozvebygkxawcbwtouaankxsjrteeijpuzbsfsjwxejtfrancoekxgfyangvzjkdskhs"
                 + "sdjvkvdskjtiybqgsmpxmghvvicmjxqtxdowkjhmlnfcpbtwvtmjhnzntxyfxyinmqzivxkwigkondghzmbioelmepgfttczskvqfejfii"

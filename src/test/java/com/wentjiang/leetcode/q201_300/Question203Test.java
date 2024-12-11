@@ -2,10 +2,8 @@ package com.wentjiang.leetcode.q201_300;
 
 import com.wentjiang.leetcode.utils.ListNode;
 import com.wentjiang.leetcode.utils.ListNodeUtil;
-import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 public class Question203Test {
 

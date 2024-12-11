@@ -1,10 +1,8 @@
 package com.wentjiang.leetcode.q1_100;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author wentao.jiang
@@ -15,15 +13,10 @@ import static org.junit.Assert.*;
  */
 public class Question58Test {
 
-    private Question58 question58;
-
-    @Before
-    public void setUp() throws Exception {
-        question58 = new Question58();
-    }
+    private Question58 question58 = new Question58();
 
     @Test
     public void lengthOfLastWord() {
-        Assert.assertEquals(5, question58.lengthOfLastWord("Hello World"));
+        assertEquals(5, question58.lengthOfLastWord("Hello World"));
     }
 }

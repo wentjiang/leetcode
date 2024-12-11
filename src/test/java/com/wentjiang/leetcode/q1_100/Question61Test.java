@@ -1,8 +1,8 @@
 package com.wentjiang.leetcode.q1_100;
 
 import com.wentjiang.leetcode.utils.ListNodeUtil;
-import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class Question61Test {
 

@@ -2,7 +2,7 @@ package com.wentjiang.leetcode.practice.day3;
 
 public class Day3Question2 {
 
-    //暴力求解法,二维数组存储当前列到之前某列的最小值,最小值*宽度即为当前的结果.
+    // 暴力求解法,二维数组存储当前列到之前某列的最小值,最小值*宽度即为当前的结果.
     public int question(int[] heights) {
         if (heights.length == 1) {
             return heights[0];
