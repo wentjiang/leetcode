@@ -32,6 +32,7 @@ public class PDDInterview {
             max = sum;
         }
         for (int i = k; i < nums.length; i++) {
+            sum = sum - currentMap.get(i - k) + nums[i];
             currentMap.put(i, nums[i]);
             currentMap.remove(i - k);
             if (new HashSet<>(currentMap.values()).size() == k && sum > max) {
