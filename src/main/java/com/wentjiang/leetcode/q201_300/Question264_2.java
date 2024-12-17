@@ -5,6 +5,7 @@ public class Question264_2 {
      * 使用动态规划的方式
      *
      * @param n
+     * 
      * @return
      */
     public int nthUglyNumber(int n) {

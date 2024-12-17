@@ -24,11 +24,11 @@ public class Question88 {
                     nums1[l1 + l2 - 1] = t2;
                     l2--;
                 }
-            }else if (l1 == 0 && l2 >= 1) {
+            } else if (l1 == 0 && l2 >= 1) {
                 nums1[l2 - 1] = nums2[l2 - 1];
                 l2--;
-            }else if (l1 >= 1 && l2 == 0) {
-//                nums1[l1-1] = nums1[l1-1];
+            } else if (l1 >= 1 && l2 == 0) {
+                // nums1[l1-1] = nums1[l1-1];
                 l1--;
             }
         }

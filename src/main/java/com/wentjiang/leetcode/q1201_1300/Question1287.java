@@ -5,13 +5,13 @@ public class Question1287 {
         int count = 0;
         int currentValue = arr[0];
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == currentValue){
+            if (arr[i] == currentValue) {
                 count++;
-            }else{
+            } else {
                 currentValue = arr[i];
                 count = 1;
             }
-            if ((double) count / arr.length > 0.25){
+            if ((double) count / arr.length > 0.25) {
                 return currentValue;
             }
         }

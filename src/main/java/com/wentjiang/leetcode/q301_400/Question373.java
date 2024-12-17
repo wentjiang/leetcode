@@ -9,6 +9,7 @@ public class Question373 {
      * @param nums1
      * @param nums2
      * @param k
+     * 
      * @return
      */
     public List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {
@@ -23,7 +24,7 @@ public class Question373 {
             }
         }
         result.sort(Comparator.comparingInt(l -> l.get(0) + l.get(1)));
-        return result.subList(0,k);
+        return result.subList(0, k);
     }
 
 }

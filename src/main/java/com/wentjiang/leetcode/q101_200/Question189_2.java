@@ -2,9 +2,7 @@ package com.wentjiang.leetcode.q101_200;
 
 public class Question189_2 {
     /**
-     * 两次逆置的方式
-     * 时间复杂度 O(n)
-     * 空间复杂度 O(1)
+     * 两次逆置的方式 时间复杂度 O(n) 空间复杂度 O(1)
      *
      * @param nums
      * @param k

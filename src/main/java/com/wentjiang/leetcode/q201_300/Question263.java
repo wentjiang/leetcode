@@ -4,10 +4,11 @@ public class Question263 {
 
     /**
      * @param n
+     * 
      * @return
      */
     public boolean isUgly(int n) {
-        if (n == 0){
+        if (n == 0) {
             return false;
         }
         boolean divideBy2 = true;

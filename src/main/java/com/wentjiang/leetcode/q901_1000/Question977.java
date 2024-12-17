@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 public class Question977 {
     /**
-     * 方法1: 所有的数字都平方,再排序, 时间: nlogn 空间 1
-     * 方法2: 需要时间为n 前后指针方法,从两边往中间替换数组  时间n 空间n
+     * 方法1: 所有的数字都平方,再排序, 时间: nlogn 空间 1 方法2: 需要时间为n 前后指针方法,从两边往中间替换数组 时间n 空间n
      *
      * @param nums
+     * 
      * @return
      */
     public int[] sortedSquares(int[] nums) {
@@ -18,9 +18,9 @@ public class Question977 {
         return nums;
     }
 
-
     /**
      * @param nums
+     * 
      * @return
      */
     public int[] sortedSquares2(int[] nums) {
