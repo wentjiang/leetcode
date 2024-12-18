@@ -9,9 +9,9 @@ public class Question203_1 {
         ListNode currentNode = preHead;
         while (currentNode.next != null) {
             ListNode nextNode = currentNode.next;
-            if (nextNode.val == val){
+            if (nextNode.val == val) {
                 currentNode.next = nextNode.next;
-            }else{
+            } else {
                 currentNode = currentNode.next;
             }
         }

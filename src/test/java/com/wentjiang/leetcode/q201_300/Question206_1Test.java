@@ -15,8 +15,8 @@ class Question206_1Test {
 
     @Test
     void reverseList() {
-        ListNode ln = ListNodeUtil.createListNodeByArray(new int[]{1,2,3,4,5});
+        ListNode ln = ListNodeUtil.createListNodeByArray(new int[] { 1, 2, 3, 4, 5 });
         ListNode result = question206_1.reverseList(ln);
-        Assertions.assertArrayEquals(new int[]{5, 4, 3, 2, 1}, result.toArray());
+        Assertions.assertArrayEquals(new int[] { 5, 4, 3, 2, 1 }, result.toArray());
     }
 }

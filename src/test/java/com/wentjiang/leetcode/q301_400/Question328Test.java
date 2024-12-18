@@ -13,13 +13,14 @@ class Question328Test {
 
     @Test
     void oddEvenList() {
-        ListNode result = question328.oddEvenList(ListNodeUtil.createListNodeByArray(new int[]{1, 2, 3, 4, 5}));
-        Assertions.assertArrayEquals(new int[]{1, 3, 5, 2, 4}, ListNodeUtil.createArrayByListNode(result));
+        ListNode result = question328.oddEvenList(ListNodeUtil.createListNodeByArray(new int[] { 1, 2, 3, 4, 5 }));
+        Assertions.assertArrayEquals(new int[] { 1, 3, 5, 2, 4 }, ListNodeUtil.createArrayByListNode(result));
     }
 
     @Test
     void oddEvenList2() {
-        ListNode result = question328.oddEvenList(ListNodeUtil.createListNodeByArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8}));
-        Assertions.assertArrayEquals(new int[]{1, 3, 5, 7, 2, 4, 6, 8}, ListNodeUtil.createArrayByListNode(result));
+        ListNode result = question328
+                .oddEvenList(ListNodeUtil.createListNodeByArray(new int[] { 1, 2, 3, 4, 5, 6, 7, 8 }));
+        Assertions.assertArrayEquals(new int[] { 1, 3, 5, 7, 2, 4, 6, 8 }, ListNodeUtil.createArrayByListNode(result));
     }
 }

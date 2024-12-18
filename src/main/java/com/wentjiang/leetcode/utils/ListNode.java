@@ -37,10 +37,10 @@ public class ListNode {
     @Override
     public String toString() {
         return Arrays.toString(ListNodeUtil.createArrayByListNode(this));
-//        if (next == null) {
-//            return "ListNode{" + "val=" + val + ", next is null";
-//        } else {
-//            return "ListNode{" + "val=" + val + ", next.val=" + Arrays.toString(next.toArray()) + '}';
-//        }
+        // if (next == null) {
+        // return "ListNode{" + "val=" + val + ", next is null";
+        // } else {
+        // return "ListNode{" + "val=" + val + ", next.val=" + Arrays.toString(next.toArray()) + '}';
+        // }
     }
 }
