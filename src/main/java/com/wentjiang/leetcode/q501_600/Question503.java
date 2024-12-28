@@ -7,7 +7,7 @@ import java.util.Deque;
 public class Question503 {
     /**
      * 使用栈时注意栈内存储的是值还是索引, 循环的情况,需要遍历两次, 保证逻辑能够遍历完整.
-     *
+     * 栈内存储索引,既能当索引,又能当值来用
      * @param nums
      * @return
      */
