@@ -19,24 +19,22 @@ class MyStack {
     // 将元素先加入 side queue, mainqueue全加入sidequeue,再将sidequeue全放入mainqueue
     public void push(int x) {
         sideQueue.offer(x);
-        while(!mainQueue.isEmpty()){
+        while (!mainQueue.isEmpty()) {
             sideQueue.offer(mainQueue.poll());
         }
-        while(!sideQueue.isEmpty()){
+        while (!sideQueue.isEmpty()) {
             mainQueue.offer(sideQueue.poll());
         }
     }
 
-    //从mainqueue 取第一个元素
+    // 从mainqueue 取第一个元素
     public int pop() {
         return mainQueue.poll();
     }
 
-
     public int top() {
         return mainQueue.peek();
     }
-
 
     public boolean empty() {
         return mainQueue.isEmpty();

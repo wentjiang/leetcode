@@ -16,7 +16,6 @@ class Question316Test {
         Assertions.assertEquals("abc", result);
     }
 
-
     @Test
     void removeDuplicateLetters1() {
         String result = question316.removeDuplicateLetters("cbacdcbc");

@@ -16,7 +16,7 @@ public class Question1047_1 {
             }
         }
         StringBuilder sb = new StringBuilder();
-        while(!deque.isEmpty()){
+        while (!deque.isEmpty()) {
             sb.append(deque.pollFirst());
         }
         return sb.toString();

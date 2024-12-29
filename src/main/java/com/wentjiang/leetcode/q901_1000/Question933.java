@@ -5,7 +5,6 @@ import java.util.Queue;
 
 public class Question933 {
 
-
 }
 
 class RecentCounter {

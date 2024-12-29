@@ -6,13 +6,11 @@ import java.util.Deque;
 public class Question239_1 {
 
     /**
-     * 使用双端队列, 左边的大,右边的小
-     * 队列中存放索引
-     * 新的元素进来时, 如果小于队尾的元素, 将队尾出队列,直到不小于当前元素,
-     * 如果队头的元素的索引已经超了范围,则将队头出队列
+     * 使用双端队列, 左边的大,右边的小 队列中存放索引 新的元素进来时, 如果小于队尾的元素, 将队尾出队列,直到不小于当前元素, 如果队头的元素的索引已经超了范围,则将队头出队列
      *
      * @param nums
      * @param k
+     * 
      * @return
      */
     public int[] maxSlidingWindow(int[] nums, int k) {
