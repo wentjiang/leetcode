@@ -10,7 +10,6 @@ public class Question242 {
      *
      * @param s
      * @param t
-     * 
      * @return
      */
     public boolean isAnagram(String s, String t) {
@@ -43,12 +42,11 @@ public class Question242 {
         for (char ch : t.toCharArray()) {
             array[ch - 'a'] = array[ch - 'a'] - 1;
         }
-        int count0 = 0;
         for (int a : array) {
-            if (a == 0) {
-                count0++;
+            if (a != 0) {
+                return false;
             }
         }
-        return count0 == 26;
+        return true;
     }
 }
