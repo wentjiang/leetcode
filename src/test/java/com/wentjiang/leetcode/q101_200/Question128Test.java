@@ -11,6 +11,6 @@ class Question128Test {
 
     @Test
     void longestConsecutive() {
-        Assertions.assertEquals(4,question128.longestConsecutive(new int[]{100,4,200,1,3,2}));
+        Assertions.assertEquals(4, question128.longestConsecutive(new int[] { 100, 4, 200, 1, 3, 2 }));
     }
 }

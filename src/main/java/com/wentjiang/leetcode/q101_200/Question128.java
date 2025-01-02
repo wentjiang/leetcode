@@ -10,6 +10,7 @@ public class Question128 {
      * 将元素值放在hashmap中, key存储数值, value存储当前最长的值
      *
      * @param nums
+     * 
      * @return
      */
     public int longestConsecutive(int[] nums) {

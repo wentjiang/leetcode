@@ -9,6 +9,7 @@ public class Question202 {
      * 如果重复出现过就不是快乐数
      *
      * @param n
+     * 
      * @return
      */
     public boolean isHappy(int n) {

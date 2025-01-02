@@ -7,11 +7,10 @@ public class Question705 {
 
 class MyHashSet {
 
-
     private static final int HASH_MODE_NUM = 997;
     private LinkedList<Integer>[] hashList;
 
-    //使用链表对hash进行扩展
+    // 使用链表对hash进行扩展
 
     public MyHashSet() {
         hashList = new LinkedList[HASH_MODE_NUM];
@@ -34,7 +33,7 @@ class MyHashSet {
 
         if (!list.isEmpty()) {
             for (int i = 0; i < list.size(); i++) {
-                if (list.get(i) == key){
+                if (list.get(i) == key) {
                     list.remove(i);
                     break;
                 }

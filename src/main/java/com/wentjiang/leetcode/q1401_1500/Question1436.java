@@ -10,8 +10,8 @@ public class Question1436 {
         for (List<String> path : paths) {
             start.add(path.getFirst());
         }
-        for (List<String> path : paths){
-            if (!start.contains(path.getLast())){
+        for (List<String> path : paths) {
+            if (!start.contains(path.getLast())) {
                 return path.getLast();
             }
         }

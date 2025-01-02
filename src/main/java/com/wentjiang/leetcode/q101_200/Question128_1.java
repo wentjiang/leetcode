@@ -13,7 +13,7 @@ public class Question128_1 {
         int max = 0;
 
         for (int num : set) {
-            //此处有优化,如果不是第一个起始的直接忽略
+            // 此处有优化,如果不是第一个起始的直接忽略
             if (!set.contains(num - 1)) {
                 int currentValue = num;
                 int count = 1;
