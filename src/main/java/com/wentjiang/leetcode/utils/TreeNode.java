@@ -12,8 +12,12 @@ public class TreeNode {
     public TreeNode left;
     public TreeNode right;
 
-    TreeNode(int x) {
+    public TreeNode(int x) {
         val = x;
+    }
+
+    public TreeNode(){
+
     }
 
     public TreeNode(int val, TreeNode left, TreeNode right) {
