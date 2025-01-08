@@ -8,11 +8,11 @@ public class Question1436 {
     public String destCity(List<List<String>> paths) {
         Set<String> start = new HashSet<>();
         for (List<String> path : paths) {
-            start.add(path.getFirst());
+            start.add(path.get(0));
         }
         for (List<String> path : paths) {
-            if (!start.contains(path.getLast())) {
-                return path.getLast();
+            if (!start.contains(path.get(path.size() - 1))) {
+                return path.get(path.size() - 1);
             }
         }
         return "";
