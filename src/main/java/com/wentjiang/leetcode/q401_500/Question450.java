@@ -13,43 +13,36 @@ public class Question450 {
      * @return
      */
     public TreeNode deleteNode(TreeNode root, int key) {
-        TreeNode currentNode = root;
-        TreeNode parentNode = null;
-        while (currentNode != null) {
-            if (currentNode.val == key) {
-                TreeNode leftChild = currentNode.left;
-                TreeNode rightChild = currentNode.right;
-                TreeNode mergedTree = mergeTwoTree(leftChild,rightChild);
-
-            } else {
-                parentNode = currentNode;
-                if (key > currentNode.val) {
-                    currentNode = currentNode.right;
-                } else {
-                    currentNode = currentNode.left;
-                }
-            }
-        }
-        return root;
-    }
-
-    private TreeNode mergeTwoTree(TreeNode leftChild, TreeNode rightChild) {
-        if (leftChild == null){
-            return rightChild;
-        }
-        if (rightChild == null){
+        if (root == null) {
             return null;
         }
-
-        TreeNode parent = null;
-        TreeNode currentNode = leftChild;
-        while(currentNode != null){
-            parent = currentNode;
-            currentNode = currentNode.right;
+        if (root.val == key) {
+            if (root.left == null && root.right == null) {
+                return null;
+            }
+            if (root.left == null) {
+                return root.right;
+            }
+            if (root.right == null) {
+                return root.left;
+            }
+            //都不为null的情况,合并两棵树,返回合并后的根节点
+            TreeNode successor = root.right;
+            while (successor.left != null) {
+                successor = successor.left;
+            }
+            successor.left = root.left;
+            return root.right;
         }
-        parent.right = rightChild;
+        if (root.val > key) {
+            root.left = deleteNode(root.left, key);
+            return root;
+        }
+        if (root.val < key) {
+            root.right = deleteNode(root.right, key);
+            return root;
+        }
 
-
-        return leftChild;
+        return root;
     }
 }
