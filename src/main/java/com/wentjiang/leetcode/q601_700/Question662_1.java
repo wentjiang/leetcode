@@ -29,7 +29,7 @@ public class Question662_1 {
                 }
             }
             if (!tmp.isEmpty()) {
-                max = Math.max(max, tmp.getLast().getValue() - tmp.getFirst().getValue() + 1);
+                max = Math.max(max, tmp.get(tmp.size()-1).getValue() - tmp.get(0).getValue() + 1);
             }
             list = tmp;
         }
