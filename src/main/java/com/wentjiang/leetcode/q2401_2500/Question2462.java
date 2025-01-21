@@ -27,28 +27,34 @@ public class Question2462 {
             }
         });
         int firstIndex = candidates - 1;
-        int secondIndex = k - candidates;
+        int secondIndex = costs.length - candidates;
 
         //初始化优先队列
-
-        //全部都放在队列中
-        if (costs.length < 2 * candidates) {
-            for (int cost : costs) {
-                pq.offer(cost);
-            }
-        } else {
+        if (firstIndex + 1 < secondIndex) {
             //只放前边的candidates个和后边的candidates个数据
             for (int i = 0; i < candidates; i++) {
-                pq.add(costs[i]);
-                pq.add(costs[k - candidates]);
+                pq.add(i);
+                pq.add(costs.length - candidates + i);
+            }
+        } else {
+            //全部都放在队列中
+            for (int i = 0; i < costs.length; i++) {
+                pq.offer(i);
             }
         }
         while (k > 0) {
             int index = pq.poll();
             int value = costs[index];
-            if (index <= firstIndex && ){
-
+            if (firstIndex + 1 < secondIndex) {
+                if (index <= firstIndex) {
+                    firstIndex++;
+                    pq.offer(firstIndex);
+                } else if (index >= secondIndex) {
+                    secondIndex--;
+                    pq.offer(secondIndex);
+                }
             }
+
             sum += value;
 
             k--;
