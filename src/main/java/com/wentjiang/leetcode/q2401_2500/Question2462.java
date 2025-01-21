@@ -16,14 +16,44 @@ public class Question2462 {
         long sum = 0L;
         PriorityQueue<Integer> pq = new PriorityQueue<>(new Comparator<Integer>() {
             @Override
-            public int compare(Integer o1, Integer o2) {
-                return o2 - o1;
+            public int compare(Integer index1, Integer index2) {
+                if (costs[index2] > costs[index1]) {
+                    return -1;
+                } else if (costs[index2] == costs[index1]) {
+                    return index1 - index2;
+                } else {
+                    return 1;
+                }
             }
         });
+        int firstIndex = candidates - 1;
+        int secondIndex = k - candidates;
 
-        if (costs.length < candidates) {
+        //初始化优先队列
 
+        //全部都放在队列中
+        if (costs.length < 2 * candidates) {
+            for (int cost : costs) {
+                pq.offer(cost);
+            }
+        } else {
+            //只放前边的candidates个和后边的candidates个数据
+            for (int i = 0; i < candidates; i++) {
+                pq.add(costs[i]);
+                pq.add(costs[k - candidates]);
+            }
         }
+        while (k > 0) {
+            int index = pq.poll();
+            int value = costs[index];
+            if (index <= firstIndex && ){
+
+            }
+            sum += value;
+
+            k--;
+        }
+
         return sum;
     }
 }
