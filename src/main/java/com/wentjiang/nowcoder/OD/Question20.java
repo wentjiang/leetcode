@@ -7,6 +7,6 @@ public class Question20 {
 
     public static int getResult(int r, int[] arrays, int data){
         double totalCapacity = Math.pow(2,r);
-
+        return 0;
     }
 }
